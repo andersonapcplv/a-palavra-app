@@ -1,4 +1,4 @@
-const CACHE = 'a-palavra-v0.8.0';
+const CACHE = 'a-palavra-v0.9.0';
 const CORE = [
   './',
   './index.html',
@@ -13,7 +13,8 @@ const CORE = [
   './assets/audio/uniq-art-of-silence-v2.ogg',
   './data/marcos-n4.json',
   './data/biblia-livre-n4.json',
-  './data/biblia-livre-n4-origem.json'
+  './data/biblia-livre-n4-origem.json',
+  './content/studies-approved.json'
 ];
 
 const sameOrigin = (request) => new URL(request.url).origin === self.location.origin;

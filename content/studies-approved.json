@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "publication_policy": "Somente itens com aprovação completa de Gemini Flash e Groq openai/gpt-oss-120b nos 36 critérios.",
+  "studies": []
+}

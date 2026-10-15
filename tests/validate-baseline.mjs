@@ -9,7 +9,7 @@ const required = [
   'assets/icon-192.png', 'assets/icon-512.png', 'assets/hero-paz-piloto.webp', 'assets/reflexao-paz-piloto.webp', 'assets/quadro-institucional-piloto.webp',
   'data/biblia-livre-n4.json', 'data/marcos-n4.json', 'data/biblia-livre-n4-origem.json',
   'assets/audio/uniq-art-of-silence-v2.ogg', 'docs/AUDIO_CREDITS.md',
-  '36_criterios_canonicos.json'
+  '36_criterios_canonicos.json', 'content/studies-approved.json'
 ];
 for (const file of required) if (!fs.existsSync(file)) fail(`arquivo ausente: ${file}`);
 
@@ -32,13 +32,16 @@ if (gatesHash !== expected) fail(`SHA dos gates divergente: ${gatesHash}`);
 
 const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 const appSource = fs.readFileSync('app.js', 'utf8');
-if (!serviceWorker.includes("const CACHE = 'a-palavra-v0.8.0'")) fail('versão esperada do cache não encontrada');
+const studies = readJson('content/studies-approved.json');
+if (studies.schema_version !== 1 || !Array.isArray(studies.studies)) fail('manifesto de estudos inválido');
+if (!serviceWorker.includes("const CACHE = 'a-palavra-v0.9.0'")) fail('versão esperada do cache não encontrada');
 if (!serviceWorker.includes("url.search = ''")) fail('service worker não normaliza parâmetros de versão');
 if (!serviceWorker.includes('cacheResponse(request, response)')) fail('service worker não atualiza o cache após buscar recursos');
 if (!appSource.includes('bibleHighlights')) fail('persistência de marcações de versículos não encontrada');
 if (!appSource.includes('chapterQuick')) fail('acesso rápido aos capítulos não encontrado');
 if (!appSource.includes('verseSelect')) fail('seletor de versículos não encontrado');
 if (!appSource.includes('apoie:')) fail('tela separada de apoio não encontrada');
+if (!appSource.includes('loadApprovedStudies')) fail('carregamento de estudos aprovados não encontrado');
 for (const staleReference of ['ambiente-leitura.mp3', 'ambientAudio', 'bindMusicControls', 'toggleMusic', 'stopMusic']) {
   if (appSource.includes(staleReference)) fail(`referência residual ao áudio removido: ${staleReference}`);
 }
