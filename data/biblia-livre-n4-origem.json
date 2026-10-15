@@ -1,0 +1,43 @@
+{
+  "SOURCE_ID": "blivre-n4-2018.2.0-repaired-v32.2",
+  "SOURCE_NAME": "Bíblia Livre (BLIVRE)",
+  "SOURCE_VERSION": "2018.2.0",
+  "SOURCE_VARIANT": "N4 — Texto Crítico",
+  "SOURCE_MODULE": "BibliaLivreN4",
+  "SOURCE_MODULE_VERSION": "1.3.14",
+  "SOURCE_LICENSE": "Creative Commons Atribuição 3.0 Brasil",
+  "SOURCE_URL": "https://github.com/blivre/BibliaLivre/releases/tag/2018.2.0",
+  "SOURCE_ASSET": "crosswiresword-blivre-n4.zip + bliv-n4_osis.zip",
+  "SOURCE_HASH": "01bf17be7909f09e0a3fbea9f32101e53a5cef872d8d970c33e507f31c12ebf7",
+  "ATTRIBUTION": "Bíblia Livre (BLIVRE) — Texto de Nestle 1904, Copyright © Diego Santos, Mario Sérgio e Marco Teles, http://sites.google.com/site/biblialivre/ — fevereiro de 2018. Licença Creative Commons Atribuição 3.0 Brasil.",
+  "books": 66,
+  "chapters": 1189,
+  "verseRecords": 31102,
+  "notesExtracted": 1658,
+  "markupRecords": 9022,
+  "normalization": "non-destructive; text, notes, markup and source metadata separated",
+  "generatedBy": "normalize_n4_to_pwa.py",
+  "UPSTREAM_ASSET_SHA256": "7cf608ad67c5134fb030f6a181ad6104d4bc28f0aaa21c450a9955505b527835",
+  "SECONDARY_SOURCE_SHA256": "a8502b49de0bdf986c2fe5403e861a4a28f9efd278700af7f274166daeb8ba30",
+  "NORMALIZED_CORPUS_SHA256": "4a56d0b5a1dd322dd794e67387eb1d8da798ec445895372457247228b4e123cc",
+  "REPAIRED_CORPUS_SHA256": "01bf17be7909f09e0a3fbea9f32101e53a5cef872d8d970c33e507f31c12ebf7",
+  "CORPUS_STATE": "normalized_with_official_same_release_provenance_repair",
+  "REPAIR_RECORD": "../v321-audit/repair-record.json",
+  "REPAIR_COUNT": 429,
+  "JUDAS_1_1_PROVENANCE": "VERIFIED",
+  "JUDAS_1_1_TEXT": "Judas, servo de Jesus Cristo, e irmão de Tiago, para aqueles que foram chamados, amados por Deus Pai, e guardados por Jesus Cristo.",
+  "displayNormalization": {
+    "version": "v32.2",
+    "source": "official OSIS bliv-n4_osis.zip",
+    "sourceSha256": "a8502b49de0bdf986c2fe5403e861a4a28f9efd278700af7f274166daeb8ba30",
+    "scope": "structural-boundary-only",
+    "changes": 116,
+    "rules": [
+      "Psalm canonical titles outside OSIS verse milestones are not merged into verse 1",
+      "OSIS book-group title New Testament is not appended to Malachi 4:6"
+    ],
+    "textualPolicy": "No translation wording was rewritten; only text proven by OSIS structure to be outside verse milestones was separated from visible verse text.",
+    "structuralElementsCount": 116
+  },
+  "DISPLAY_CORPUS_SHA256": "de2ebd53ab9379b4604c4a5a38899098cfb1bf3ea6de67ef70adc7615879ab1b"
+}

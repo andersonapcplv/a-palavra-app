@@ -1,0 +1,31 @@
+{
+  "study_id": "piloto-marcos-1-1-3-15",
+  "reference": "Marcos 1:1–3:15",
+  "expected_verses": 88,
+  "provisional_target": true,
+  "selection_basis": "Proposta operacional para iniciar o piloto de 88 versículos: Marcos 1 tem 45, Marcos 2 tem 28 e Marcos 3:1–15 tem 15, totalizando 88 versículos consecutivos. O proprietário pode redirecionar o piloto antes da geração real.",
+  "generator": "Qwen on Kaggle",
+  "language": "pt-BR",
+  "requested_content_sections": [
+    "title",
+    "objective",
+    "context",
+    "explanation",
+    "reflection_questions",
+    "application",
+    "summary",
+    "prayer"
+  ],
+  "audit_policy": {
+    "required_auditors": ["gemini", "groq"],
+    "gemini_model_family": "Gemini Flash",
+    "groq_model": "openai/gpt-oss-120b",
+    "canonical_gate_count": 36,
+    "require_all_gates_pass_in_both_auditors": true,
+    "third_auditor_allowed": false,
+    "publish_on_dual_approval_and_integrity_pass": true
+  },
+  "generation_status": "queued_not_generated",
+  "audit_status": "not_started",
+  "publication_status": "not_approved"
+}

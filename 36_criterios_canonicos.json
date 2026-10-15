@@ -1,0 +1,186 @@
+{
+  "source": "Palavra-viva-main.zip:Palavra-viva-main/netlify/lib/pipeline-core.mjs",
+  "sha256_order": "e5863bb7388275432fa0ab4dad0ecccbbb6c60787109addb90e5d0a7b728268a",
+  "gates": [
+    {
+      "number": 1,
+      "id": "TARGET_FIDELITY",
+      "explanation_pt_br": "Fidelidade ao texto-alvo: afirmações centrais correspondem à passagem exata."
+    },
+    {
+      "number": 2,
+      "id": "CONTEXT_FIDELITY",
+      "explanation_pt_br": "Fidelidade ao contexto anterior e posterior, sem deslocar o sentido."
+    },
+    {
+      "number": 3,
+      "id": "REFERENCE_BOUNDARY",
+      "explanation_pt_br": "Respeito aos limites da referência: não atribuir ao alvo conteúdo de outro trecho."
+    },
+    {
+      "number": 4,
+      "id": "SPEAKER_AUDIENCE_CONSISTENCY",
+      "explanation_pt_br": "Coerência entre quem fala, quem ouve e destinatários do texto."
+    },
+    {
+      "number": 5,
+      "id": "GENRE_COMPATIBILITY",
+      "explanation_pt_br": "Compatibilidade com gênero literário (narrativa, poesia, parábola, profecia etc.)."
+    },
+    {
+      "number": 6,
+      "id": "NARRATIVE_EVENT_CONSISTENCY",
+      "explanation_pt_br": "Consistência dos eventos narrados e sua relação causal."
+    },
+    {
+      "number": 7,
+      "id": "TEMPORAL_SEQUENCE",
+      "explanation_pt_br": "Preservação da sequência temporal dos acontecimentos."
+    },
+    {
+      "number": 8,
+      "id": "PERSON_ENTITY_CONSISTENCY",
+      "explanation_pt_br": "Identificação correta de pessoas, grupos, lugares e entidades."
+    },
+    {
+      "number": 9,
+      "id": "QUOTATION_BOUNDARY",
+      "explanation_pt_br": "Fronteira clara entre citação literal, paráfrase e explicação."
+    },
+    {
+      "number": 10,
+      "id": "UNSUPPORTED_CLAIM",
+      "explanation_pt_br": "Ausência de afirmação factual sem sustentação textual/contextual."
+    },
+    {
+      "number": 11,
+      "id": "OVERINTERPRETATION",
+      "explanation_pt_br": "Evitar extrapolações interpretativas que ultrapassem a evidência."
+    },
+    {
+      "number": 12,
+      "id": "DOCTRINAL_OVERREACH",
+      "explanation_pt_br": "Não transformar inferência em doutrina obrigatória."
+    },
+    {
+      "number": 13,
+      "id": "CHRISTOLOGICAL_FORCE",
+      "explanation_pt_br": "Não impor leitura cristológica artificial quando o texto não a sustenta."
+    },
+    {
+      "number": 14,
+      "id": "PROMISE_SCOPE",
+      "explanation_pt_br": "Respeitar a quem, quando e em que condições uma promessa se dirige."
+    },
+    {
+      "number": 15,
+      "id": "COVENANT_SCOPE",
+      "explanation_pt_br": "Respeitar a abrangência e destinatários das alianças bíblicas."
+    },
+    {
+      "number": 16,
+      "id": "COMMAND_SCOPE",
+      "explanation_pt_br": "Respeitar a abrangência de mandamentos e seu contexto."
+    },
+    {
+      "number": 17,
+      "id": "PROPHECY_SCOPE",
+      "explanation_pt_br": "Não universalizar profecias ou criar previsões não sustentadas."
+    },
+    {
+      "number": 18,
+      "id": "MIRACLE_SCOPE",
+      "explanation_pt_br": "Não generalizar milagres como garantia automática ao leitor."
+    },
+    {
+      "number": 19,
+      "id": "BLESSING_SCOPE",
+      "explanation_pt_br": "Não universalizar bênçãos além das condições e destinatários textuais."
+    },
+    {
+      "number": 20,
+      "id": "JUDGMENT_SCOPE",
+      "explanation_pt_br": "Respeitar o escopo de juízos e advertências."
+    },
+    {
+      "number": 21,
+      "id": "PRAYER_FIDELITY",
+      "explanation_pt_br": "Ensinar oração de modo fiel ao texto, sem prometer resposta específica."
+    },
+    {
+      "number": 22,
+      "id": "FASTING_SCOPE",
+      "explanation_pt_br": "Não distorcer contexto, prática ou exigências de jejum."
+    },
+    {
+      "number": 23,
+      "id": "APPLICATION_FIDELITY",
+      "explanation_pt_br": "Aplicação prática deriva legitimamente do sentido da passagem."
+    },
+    {
+      "number": 24,
+      "id": "PASTORAL_SAFETY",
+      "explanation_pt_br": "Segurança pastoral: não induzir culpa, medo ou orientação prejudicial."
+    },
+    {
+      "number": 25,
+      "id": "ABUSE_SAFETY",
+      "explanation_pt_br": "Não legitimar abuso, coerção ou permanência em situação perigosa."
+    },
+    {
+      "number": 26,
+      "id": "MEDICAL_SAFETY",
+      "explanation_pt_br": "Não substituir cuidado médico ou prometer cura garantida."
+    },
+    {
+      "number": 27,
+      "id": "FINANCIAL_SAFETY",
+      "explanation_pt_br": "Não oferecer promessa financeira ou aconselhamento econômico enganoso."
+    },
+    {
+      "number": 28,
+      "id": "NO_PERSONAL_PROPHECY",
+      "explanation_pt_br": "Proibir profecia pessoal inventada para o leitor."
+    },
+    {
+      "number": 29,
+      "id": "NO_FALSE_DIVINE_SPEECH",
+      "explanation_pt_br": "Proibir atribuir a Deus fala não presente ou não sustentada na fonte."
+    },
+    {
+      "number": 30,
+      "id": "NO_TEMPLATE_LANGUAGE",
+      "explanation_pt_br": "Evitar linguagem mecânica de modelo e fórmulas vazias."
+    },
+    {
+      "number": 31,
+      "id": "NO_LITERAL_REPETITION",
+      "explanation_pt_br": "Não repetir literalmente conteúdo como substituto da explicação."
+    },
+    {
+      "number": 32,
+      "id": "NO_STRUCTURAL_REPETITION",
+      "explanation_pt_br": "Evitar repetição estrutural automática que empobreça o ensino."
+    },
+    {
+      "number": 33,
+      "id": "NO_GENERIC_APPLICATION",
+      "explanation_pt_br": "Evitar aplicação genérica desconectada da passagem."
+    },
+    {
+      "number": 34,
+      "id": "NO_GENERIC_PRAYER",
+      "explanation_pt_br": "Evitar oração genérica sem relação com a passagem."
+    },
+    {
+      "number": 35,
+      "id": "CROSS_SECTION_CONSISTENCY",
+      "explanation_pt_br": "Manter coerência entre explicação, aplicação, síntese e oração."
+    },
+    {
+      "number": 36,
+      "id": "LANGUAGE_CLARITY",
+      "explanation_pt_br": "Clareza linguística, legibilidade, precisão e compreensão."
+    }
+  ]
+}
