@@ -1,21 +1,13 @@
-# Créditos e licença do áudio
+# Créditos e características do áudio
 
-**Faixa:** “Echoes Of Home”
-**Autor:** Scott Buckley
-**Licença:** Creative Commons Attribution 4.0 International (CC BY 4.0)
-**Página oficial:** https://www.scottbuckley.com.au/library/echoes-of-home/
-**Download oficial:** https://www.scottbuckley.com.au/library/wp-content/uploads/2025/05/EchoesOfHome.mp3
-**Data de obtenção:** 15 de outubro de 2026
-**Arquivo incluído:** `assets/audio/echoes-of-home.ogg`
-**Formato/duração/tamanho:** Ogg Opus, aproximadamente 4 min 52 s, 4.640.473 bytes.
-**SHA-256:** `db0574d42873d972267470a5db9cf97d0ece9566f5c932d4740644fce18ef503`
+**Faixa:** “Paz e Reflexão”
+**Autoria:** composição instrumental original do projeto A Palavra
+**Arquivo:** `assets/audio/palavra-paz-reflexao.ogg`
+**Formato/duração/tamanho:** Ogg Opus, aproximadamente 4 minutos, 2.707.113 bytes.
+**SHA-256:** `599f6b93c26851267292ffb9179aa55a59c830e88482adec6985ffbd63e23b19`
 
-A página oficial descreve a obra como uma faixa orquestral calorosa e nostálgica, com atmosfera gentil. A licença CC BY 4.0 permite copiar, redistribuir e adaptar, inclusive em projetos comerciais, desde que o crédito apropriado e o link para a licença sejam mantidos.
+A faixa foi criada localmente para este aplicativo, sem chamada a serviço de geração e sem consumo de créditos Manus. É uma composição instrumental original baseada em camadas de sintetizador suave, notas longas, mudanças lentas de dinâmica e poucos tons de sino muito espaçados.
 
-O MP3 oficial foi transcodificado para Ogg Opus a 112 kbps para reduzir o tamanho do cache offline. Essa alteração é indicada conforme a licença.
+Não há bateria, batida marcada, voz, propaganda ou exigência de atribuição externa. O arquivo foi codificado em Ogg Opus para manter o cache offline pequeno.
 
-**Atribuição exibida no aplicativo:** “Echoes Of Home”, de Scott Buckley — released under CC-BY 4.0. https://www.scottbuckley.com.au
-
-O áudio é opcional, começa desligado, não possui autoplay e oferece volume baixo. A faixa só começa após ação do usuário.
-
-[Licença CC BY 4.0]: https://creativecommons.org/licenses/by/4.0/ "Creative Commons Attribution 4.0 International"
+O áudio permanece opcional, desligado por padrão, sem autoplay e com volume limitado. A reprodução só começa após ação do usuário.

@@ -1,4 +1,4 @@
-const CACHE = 'a-palavra-v0.9.1';
+const CACHE = 'a-palavra-v0.9.2';
 const CORE = [
   './',
   './index.html',
@@ -10,7 +10,7 @@ const CORE = [
   './assets/quadro-institucional-piloto.webp',
   './assets/icon-192.png',
   './assets/icon-512.png',
-  './assets/audio/echoes-of-home.ogg',
+  './assets/audio/palavra-paz-reflexao.ogg',
   './data/marcos-n4.json',
   './data/biblia-livre-n4.json',
   './data/biblia-livre-n4-origem.json',
