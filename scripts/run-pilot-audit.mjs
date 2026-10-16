@@ -118,8 +118,6 @@ const available = [
   process.env.CLOUDFLARE_AI_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? 'cloudflare' : null,
 ].filter(Boolean);
 if (available.length < 2) throw new Error('Auditoria pausada: são necessárias pelo menos duas APIs disponíveis entre Gemini, Groq e Cloudflare');
-const auditors = available.length === 3 ? ['gemini', 'groq'] : available;
-const policy = auditors.slice().sort().join('-');
 const callProvider = (provider, prompt, mode) => provider === 'gemini' ? gemini(prompt, mode) : provider === 'groq' ? groq(prompt) : cloudflare(prompt, mode);
 const generationInput = JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema });
 const generationProvider = available.includes('cloudflare') ? 'cloudflare' : available[0];
@@ -127,11 +125,26 @@ const generated = await callProvider(generationProvider, generationInput, 'gener
 assertDraft(generated);
 const content = JSON.stringify(generated, null, 2);
 const prompt = gatePrompt(content);
-const audits = {};
-for (const auditor of auditors) {
-  const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
-  audits[auditor] = normalizeAudit(await callProvider(auditor, prompt, 'audit'), model);
+const pairs = [['gemini', 'groq'], ['cloudflare', 'groq'], ['cloudflare', 'gemini']].filter((pair) => pair.every((provider) => available.includes(provider)));
+let auditors = null;
+let audits = null;
+let lastAuditError = null;
+for (const pair of pairs) {
+  try {
+    const candidate = {};
+    for (const auditor of pair) {
+      const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
+      candidate[auditor] = normalizeAudit(await callProvider(auditor, prompt, 'audit'), model);
+    }
+    auditors = pair;
+    audits = candidate;
+    break;
+  } catch (error) {
+    lastAuditError = error;
+  }
 }
+if (!audits) throw new Error(`Nenhum par de duas APIs concluiu a auditoria: ${lastAuditError?.message || 'erro desconhecido'}`);
+const policy = auditors.slice().sort().join('-');
 const pkg = { audit_policy: policy, study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits };
 fs.writeFileSync(`${evidenceDir}/audit-package.json`, JSON.stringify(pkg, null, 2) + '\n');
 const validation = await import('../scripts/validate-audit-package.mjs');
