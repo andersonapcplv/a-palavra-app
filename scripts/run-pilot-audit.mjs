@@ -52,10 +52,18 @@ async function gemini(prompt, mode = 'generation') {
   const system = mode === 'generation'
     ? 'Gere um rascunho editorial em português brasileiro. Retorne somente JSON com title, objective, context, explanation, reflection_questions (3), application, summary e prayer. Não declare aprovação.'
     : 'Você é um auditor independente. Retorne somente JSON válido e não faça comentários fora do JSON.';
-  const response = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.1, responseMimeType: 'application/json' } }) });
-  if (!response.ok) throw new Error(`Gemini HTTP ${response.status}: ${await response.text()}`);
-  const data = await response.json();
-  return jsonFromText(data.candidates?.[0]?.content?.parts?.map((part) => part.text || '').join('') || '');
+  const body = JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.1, responseMimeType: 'application/json' } });
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const response = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body });
+    if (response.ok) {
+      const data = await response.json();
+      return jsonFromText(data.candidates?.[0]?.content?.parts?.map((part) => part.text || '').join('') || '');
+    }
+    const errorText = await response.text();
+    const retryable = [429, 500, 502, 503, 504].includes(response.status);
+    if (!retryable || attempt === 3) throw new Error(`Gemini HTTP ${response.status}: ${errorText}`);
+    await new Promise((resolve) => setTimeout(resolve, 3000 * (attempt + 1)));
+  }
 }
 async function groq(prompt) {
   const response = await fetch('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { authorization: `Bearer ${process.env.GROQ_API_KEY}`, 'content-type': 'application/json' }, body: JSON.stringify({ model: 'openai/gpt-oss-120b', temperature: 0.1, response_format: { type: 'json_object' }, messages: [{ role: 'system', content: 'Você é um auditor independente. Retorne somente JSON válido e não faça comentários fora do JSON.' }, { role: 'user', content: prompt }] }) });
