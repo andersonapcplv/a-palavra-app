@@ -3,7 +3,11 @@ import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 
 const CANONICAL_FILE = '36_criterios_canonicos.json';
-const REQUIRED_AUDITORS = ['gemini', 'groq'];
+const AUDIT_POLICIES = {
+  'gemini-groq': { auditors: ['gemini', 'groq'], label: 'Gemini e Groq' },
+  'cloudflare-groq': { auditors: ['cloudflare', 'groq'], label: 'Cloudflare e Groq' },
+  'cloudflare-gemini': { auditors: ['cloudflare', 'gemini'], label: 'Cloudflare e Gemini' },
+};
 const DECISIONS = new Set(['pass', 'fail', 'review', 'unknown']);
 
 function readCanonicalGateIds(file = CANONICAL_FILE) {
@@ -33,16 +37,19 @@ export function validateAuditPackage(pkg, gateIds = readCanonicalGateIds()) {
     addError('content_sha256 não corresponde exatamente ao conteúdo auditado');
   }
 
+  const policy = AUDIT_POLICIES[pkg.audit_policy || 'gemini-groq'];
+  if (!policy) addError(`audit_policy inválida: ${pkg.audit_policy}`);
+
   if (!pkg.audits || typeof pkg.audits !== 'object' || Array.isArray(pkg.audits)) {
-    addError('audits deve conter exatamente os resultados de Gemini e Groq');
+    addError(`audits deve conter exatamente os resultados de ${policy?.label || 'dois auditores'}`);
   } else {
     const actualAuditors = Object.keys(pkg.audits).sort();
-    const expectedAuditors = [...REQUIRED_AUDITORS].sort();
+    const expectedAuditors = [...(policy?.auditors || [])].sort();
     if (JSON.stringify(actualAuditors) !== JSON.stringify(expectedAuditors)) {
-      addError('audits deve conter exatamente dois auditores: gemini e groq; terceiros ou substitutos não são aceitos');
+      addError(`audits deve conter exatamente dois auditores: ${(policy?.auditors || []).join(' e ')}; terceiros ou substitutos não são aceitos`);
     }
 
-    for (const auditor of REQUIRED_AUDITORS) {
+    for (const auditor of (policy?.auditors || [])) {
       const audit = pkg.audits[auditor];
       if (!audit || typeof audit !== 'object' || Array.isArray(audit)) {
         addError(`auditoria ${auditor} ausente ou inválida`);
@@ -52,6 +59,8 @@ export function validateAuditPackage(pkg, gateIds = readCanonicalGateIds()) {
         addError(`${auditor}: model obrigatório`);
       } else if (auditor === 'gemini' && !/gemini.*flash/i.test(audit.model)) {
         addError('gemini: o modelo deve ser da família Gemini Flash');
+      } else if (auditor === 'cloudflare' && !audit.model.toLowerCase().includes('cloudflare')) {
+        addError('cloudflare: o modelo deve identificar o provedor Cloudflare');
       } else if (auditor === 'groq' && audit.model !== 'openai/gpt-oss-120b') {
         addError('groq: o modelo deve ser openai/gpt-oss-120b');
       }
@@ -110,7 +119,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     const pkg = JSON.parse(fs.readFileSync(file, 'utf8'));
     const result = validateAuditPackage(pkg);
     if (result.valid) {
-      console.log(`OK: Gemini e Groq aprovaram todos os 36 critérios — ${result.status}`);
+      console.log(`OK: todos os 36 critérios aprovados — ${result.status}`);
       process.exit(0);
     }
     console.error('BLOCKED: pacote não pode seguir para publicação.');

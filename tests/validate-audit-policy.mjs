@@ -8,7 +8,7 @@ const gateIds = canonical.gates.map((gate) => gate.id);
 
 function makeAudit(decision = 'pass', auditor = 'gemini') {
   return {
-    model: auditor === 'gemini' ? 'gemini-2.5-flash' : 'openai/gpt-oss-120b',
+    model: auditor === 'gemini' ? 'gemini-2.5-flash' : auditor === 'cloudflare' ? 'cloudflare/@cf/openai/gpt-oss-120b' : 'openai/gpt-oss-120b',
     completed_at: '2026-10-15T12:00:00.000Z',
     gates: Object.fromEntries(gateIds.map((id) => [id, {
       decision,
@@ -29,6 +29,13 @@ function makePackage() {
       groq: makeAudit('pass', 'groq'),
     },
   };
+}
+
+function makeTemporaryPackage() {
+  const pkg = makePackage();
+  pkg.audit_policy = 'cloudflare-groq';
+  pkg.audits = { cloudflare: makeAudit('pass', 'cloudflare'), groq: makeAudit('pass', 'groq') };
+  return pkg;
 }
 
 const bothPass = validateAuditPackage(makePackage(), gateIds);
@@ -61,8 +68,16 @@ assert.equal(validateAuditPackage(wrongGroq, gateIds).valid, false, 'modelo Groq
 
 const alternatePair = makePackage();
 delete alternatePair.audits.groq;
-alternatePair.audits.cloudflare = makeAudit('pass');
+alternatePair.audits.cloudflare = makeAudit('pass', 'cloudflare');
 assert.equal(validateAuditPackage(alternatePair, gateIds).valid, false, 'Cloudflare não substitui auditor fixo');
+
+const temporaryPair = makeTemporaryPackage();
+assert.equal(validateAuditPackage(temporaryPair, gateIds).valid, true, 'par Cloudflare + Groq aprova com os 36 gates');
+
+const geminiCloudflare = makePackage();
+geminiCloudflare.audit_policy = 'cloudflare-gemini';
+geminiCloudflare.audits = { cloudflare: makeAudit('pass', 'cloudflare'), gemini: makeAudit('pass', 'gemini') };
+assert.equal(validateAuditPackage(geminiCloudflare, gateIds).valid, true, 'par Cloudflare + Gemini aprova com os 36 gates');
 
 const missingEvidence = makePackage();
 missingEvidence.audits.groq.gates.LANGUAGE_CLARITY.evidence = '  ';
@@ -72,4 +87,4 @@ const wrongHash = makePackage();
 wrongHash.content_sha256 = 'a'.repeat(64);
 assert.equal(validateAuditPackage(wrongHash, gateIds).valid, false, 'hash inválido bloqueia');
 
-console.log('OK: política de auditoria — Gemini e Groq obrigatórios, todos os 36 gates, sem terceiro auditor ou aprovação parcial');
+console.log('OK: política de auditoria — pares autorizados, todos os 36 gates, sem terceiro auditor ou aprovação parcial');

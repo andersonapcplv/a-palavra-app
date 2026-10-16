@@ -1,0 +1,309 @@
+{
+  "audit_policy": "cloudflare-groq",
+  "study_id": "piloto-marcos-1-1-3-15",
+  "reference": "Marcos 1:1–3:15",
+  "content": "{\n  \"title\": \"O Início do Ministério de Jesus\",\n  \"objective\": \"Compreender o início do ministério de Jesus e sua missão de pregar o Evangelho do Reino de Deus\",\n  \"context\": \"O Evangelho de Marcos começa com a apresentação de João Batista, que prepara o caminho para a vinda de Jesus. Jesus é batizado por João e, em seguida, começa seu ministério, pregando o Evangelho do Reino de Deus e realizando milagres\",\n  \"explanation\": \"Jesus começa seu ministério após ser batizado por João Batista e ser tentado no deserto. Ele prega o Evangelho do Reino de Deus, cura os doentes e expulsa demônios, demonstrando seu poder e autoridade. Ele também chama seus discípulos e os envia para pregar e expulsar demônios\",\n  \"reflection_questions\": [\n    \"Qual é o significado do batismo de Jesus e como isso relaciona-se com o início de seu ministério?\",\n    \"Como Jesus demonstra seu poder e autoridade em seus milagres e ensinamentos?\",\n    \"Qual é o papel dos discípulos de Jesus no contexto de sua missão e ministério?\"\n  ],\n  \"application\": \"Devemos aplicar os ensinamentos de Jesus em nossas vidas, buscando seguir seus exemplos de amor, compaixão e obediência a Deus. Além disso, devemos estar dispostos a compartilhar o Evangelho com os outros e a servir a Deus em nossas próprias missões e ministérios\",\n  \"summary\": \"O início do ministério de Jesus é marcado pela sua pregação do Evangelho do Reino de Deus, realização de milagres e chamada de discípulos. Ele demonstra seu poder e autoridade e nos dá exemplos de como viver uma vida de amor, compaixão e obediência a Deus\",\n  \"prayer\": \"Deus, ajuda-nos a entender e aplicar os ensinamentos de Jesus em nossas vidas. Dá-nos coragem para compartilhar o Evangelho com os outros e para servir-te em nossas próprias missões e ministérios. Amém\"\n}",
+  "content_sha256": "2a4535c9643a51c1ff3d92871c57d25efb499b43bcf45cc2825937aa25e45d7b",
+  "audits": {
+    "cloudflare": {
+      "model": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "completed_at": "2026-10-16T18:29:39.522Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "O estudo afirma que Jesus começa seu ministério após ser batizado por João Batista e ser tentado no deserto, o que é coerente com Marcos 1:9-13"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "O estudo mantém o contexto de Jesus pregando o Evangelho do Reino de Deus e realizando milagres, conforme descrito em Marcos 1:14-15 e 1:23-26"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "O estudo não atribui ao alvo conteúdo de outro trecho, mantendo-se dentro dos limites de Marcos 1:1-3:15"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "O estudo se dirige ao leitor como destinatário, mantendo a coerència entre quem fala e quem ouve"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "O estudo é compatível com o género literário de narrativa e ensino, conforme o Evangelho de Marcos"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "O estudo mantém a consistència dos eventos narrados, como a pregação de Jesus e a chamada de discípulos"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "O estudo preserva a sequència temporal dos acontecimentos, desde o batismo de Jesus até a sua pregação e milagres"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "O estudo identifica corretamente as pessoas, grupos e entidades, como Jesus, João Batista e os discípulos"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "O estudo não apresenta citações literais, mas sim explicações e paráfrases dos textos"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "O estudo não apresenta afirmações factuais sem sustentação textual ou contextual"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "O estudo não extrapola as interpretações beyond a evidència apresentada"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "O estudo não transforma inferèncias em doutrina obrigatória"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "O estudo não impõe leitura cristológica artificial quando o texto não a sustenta"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo respeita a quem, quando e em que condições as promessas se dirigem"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo respeita a abrangència e destinatários das alianças bíblicas"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo respeita a abrangència de mandamentos e seu contexto"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo não universaliza profecias ou cria previsões não sustentadas"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo não generaliza milagres como garantia automática ao leitor"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo não universaliza bênções além das condições e destinatários textuais"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo respeita o escopo de juízos e advertèncias"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "O estudo ensina oração de modo fiel ao texto, sem prometer resposta específica"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "O estudo não distorce contexto, prática ou exigèncias de jejum"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "O estudo aplicação prática deriva legitimamente do sentido da passagem"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "O estudo não induz culpa, medo ou orientação prejudicial"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "O estudo não legitima abuso, coerção ou permanència em situação perigosa"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "O estudo não substitui cuidado médico ou promete cura garantida"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "O estudo não oferece promessa financeira ou aconselhamento econômico enganoso"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "O estudo proíbe profecia pessoal inventada para o leitor"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "O estudo proíbe atribuir a Deus fala não presente ou não sustentada na fonte"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "O estudo evita linguagem mecânica de modelo e fórmulas vazias"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "O estudo não repete literalmente conteúdo como substituto da explicação"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "O estudo evita repetição estrutural automática que empobreça o ensino"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "O estudo evita aplicação genérica desconectada da passagem"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "O estudo evita oração genérica sem relação com a passagem"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "O estudo mantém coerència entre explicação, aplicação, síntese e oração"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "O estudo é claro, legível, preciso e compreensível"
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-16T18:29:45.849Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Explica que Jesus inicia ministério após batismo e desertos, conforme Mk 1:9‑15"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém contexto de João preparando caminho e chamada dos discípulos"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Nenhum conteúdo fora de Mk 1:1‑3:15 é introduzido"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente falas de Jesus, João e multidão"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Resumo expositivo compatível com gênero narrativo do evangelho"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos (batismo, tentação, pregação, milagres) seguem o relato"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Ordem cronológica respeita Mk 1‑3"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Jesus, João, discípulos, fariseus são corretamente identificados"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Não há citação literal fora de contexto"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações têm base no texto citado"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Nenhuma inferência extrapola o que o texto afirma"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Estudo permanece descritivo, sem doutrina obrigatória"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Reconhece Jesus como Filho, conforme Mk 1:11, sem acrescentar nova cristologia"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa textual é ampliada"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não trata de alianças fora do texto"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Comandos citados (ex.: seguir-me) permanecem no seu contexto"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não expande profecias além de Mk 1:2‑3"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Milagres descritos são aqueles narrados (cura, expulsão)"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma bênção é universalizada"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum juízo é extrapolado"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração é genérica e não promete resposta específica"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não aborda jejum"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação (compartilhar evangelho, seguir exemplo) deriva do texto"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma orientação prejudicial ou culpabilizante"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima abuso ou coerção"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não substitui cuidados médicos"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Ausência de profecia pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Nenhuma fala divina inventada"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto não usa linguagem de modelo vazia"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Não repete literalmente o texto como explicação"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura não é repetitiva"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação está ligada ao contexto marciano"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração reflete tema do evangelho"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerência entre explicação, aplicação, resumo e oração"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara e legível"
+        }
+      }
+    }
+  }
+}
