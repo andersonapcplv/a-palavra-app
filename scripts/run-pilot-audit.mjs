@@ -8,7 +8,15 @@ const gateIds = canonical.gates.map((gate) => gate.id);
 const required = ['title', 'objective', 'context', 'explanation', 'reflection_questions', 'application', 'summary', 'prayer'];
 
 function jsonFromText(text) {
-  if (text && typeof text === 'object') return text;
+  if (text && typeof text === 'object') {
+    if (text.title || text.gates || text.objective) return text;
+    for (const key of ['response', 'output_text', 'content', 'text', 'message', 'result', 'output']) {
+      if (text[key] !== undefined) {
+        try { return jsonFromText(text[key]); } catch {}
+      }
+    }
+    if (Array.isArray(text)) for (const item of text) { try { return jsonFromText(item); } catch {} }
+  }
   const clean = String(text).trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
   try { return JSON.parse(clean); } catch {}
   for (let start = 0; start < clean.length; start += 1) {
@@ -82,7 +90,7 @@ async function cloudflare(prompt, mode = 'generation') {
   const response = await fetch(url, { method: 'POST', headers: { authorization: `Bearer ${process.env.CLOUDFLARE_AI_TOKEN}`, 'content-type': 'application/json' }, body: JSON.stringify({ model, temperature: 0.1, response_format: { type: 'json_object' }, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }] }) });
   if (!response.ok) throw new Error(`Cloudflare HTTP ${response.status}: ${await response.text()}`);
   const data = await response.json();
-  const text = data.choices?.[0]?.message?.content || data.result?.response || data.response || data.result || '';
+  const text = data.choices?.[0]?.message?.content || data.output_text || data.result?.response || data.response || data.result || data.output || '';
   return jsonFromText(text);
 }
 function normalizeAudit(raw, model) {
