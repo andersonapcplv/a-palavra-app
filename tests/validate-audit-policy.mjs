@@ -33,7 +33,7 @@ function makePackage() {
 
 function makeTemporaryPackage() {
   const pkg = makePackage();
-  pkg.audit_policy = 'cloudflare-groq-temporary';
+  pkg.audit_policy = 'cloudflare-groq';
   pkg.audits = { cloudflare: makeAudit('pass', 'cloudflare'), groq: makeAudit('pass', 'groq') };
   return pkg;
 }
@@ -72,7 +72,12 @@ alternatePair.audits.cloudflare = makeAudit('pass', 'cloudflare');
 assert.equal(validateAuditPackage(alternatePair, gateIds).valid, false, 'Cloudflare não substitui auditor fixo');
 
 const temporaryPair = makeTemporaryPackage();
-assert.equal(validateAuditPackage(temporaryPair, gateIds).valid, true, 'modo temporário Cloudflare + Groq aprova somente com os 36 gates');
+assert.equal(validateAuditPackage(temporaryPair, gateIds).valid, true, 'par Cloudflare + Groq aprova com os 36 gates');
+
+const geminiCloudflare = makePackage();
+geminiCloudflare.audit_policy = 'cloudflare-gemini';
+geminiCloudflare.audits = { cloudflare: makeAudit('pass', 'cloudflare'), gemini: makeAudit('pass', 'gemini') };
+assert.equal(validateAuditPackage(geminiCloudflare, gateIds).valid, true, 'par Cloudflare + Gemini aprova com os 36 gates');
 
 const missingEvidence = makePackage();
 missingEvidence.audits.groq.gates.LANGUAGE_CLARITY.evidence = '  ';

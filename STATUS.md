@@ -7,13 +7,13 @@
 - Nenhum estudo foi gerado pelo Qwen nem auditado pelas APIs até esta versão; não há conteúdo aprovado. O PWA agora possui o manifesto público `content/studies-approved.json`, inicialmente vazio, e só renderiza itens com aprovação dupla completa.
 - Entrada de geração preparada para o piloto provisório Marcos 1:1–3:15 (88 versículos): `runs/piloto-marcos-1-1-3-15/generation-input.json`.
 - Preparador offline, prompt do Qwen, fila e teste da contagem de 88 versículos adicionados; Kaggle/Secrets ainda não estão disponíveis nesta sandbox.
-- Regra fixa de auditoria: Gemini e Groq; ambos devem aprovar todos os 36 critérios. Cloudflare não participa da auditoria.
+- Regra vigente de auditoria: exatamente duas APIs entre Gemini, Groq e Cloudflare devem aprovar todos os 36 critérios. Qualquer par aprovado pode publicar; com menos de duas APIs disponíveis, a auditoria é pausada. O retorno posterior de uma API não exige reauditoria de estudos já aprovados.
 - Gate local e testes da política dupla adicionados; ainda não há integração executável com Gemini/Groq nem publicação automática de estudos.
 - Música “Art Of Silence V2”, de Uniq, incluída sob CC BY 4.0, com atribuição e reprodução opcional, sem autoplay e volume máximo de 30%; teste real no Android pendente.
 - Validação determinística no GitHub Actions atualizada para testar baseline e política de auditoria.
 - Service worker em revisão para atualização confiável e cache offline com recursos versionados.
 - Teste físico no Android ainda pendente.
 - Hospedagem permanente ainda pendente; a prévia do sandbox é temporária.
-- Próxima prioridade: executar o piloto de conteúdo ensinativo em linguagem clara, registrar consumo real e integrar Qwen/Kaggle → Gemini + Groq → gate automático → publicação no PWA após aprovação dupla.
+- Próxima prioridade: executar o piloto de conteúdo ensinativo em linguagem clara, registrar consumo real e usar seleção automática de duas APIs disponíveis → gate dos 36 critérios → publicação no PWA após aprovação dupla.
 - 16/10/2026: a entrada do piloto Marcos 1:1–3:15 foi regenerada localmente, com 88 versículos e 36 critérios; todos os testes determinísticos e fixtures offline passaram, sem chamadas de API. A execução externa permanece bloqueada nesta sandbox porque Qwen/Kaggle e as credenciais Gemini/Groq não estão disponíveis; a consulta de Secrets do GitHub retornou 403 e nenhum valor foi acessado.
 - 16/10/2026: conforme orientação do proprietário, Kaggle/Qwen foi retirado do caminho operacional. Foi gerado um único rascunho estruturado pelo endpoint Gemini Flash disponível, salvo em `runs/piloto-marcos-1-1-3-15/draft.json` com `audit_status: awaiting_audit` e `publication_status: not_approved`. O rascunho não aparece no PWA e não pode ser publicado sem auditorias independentes Gemini + Groq nos 36 critérios.

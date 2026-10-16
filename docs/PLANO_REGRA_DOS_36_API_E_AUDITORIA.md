@@ -14,7 +14,7 @@ Isso prova que o contrato não foi alterado acidentalmente. Ainda não prova que
 
 ## Modelo de duas auditorias obrigatórias
 
-Para este projeto, o modelo adotado é de **exatamente duas auditorias obrigatórias: Gemini Flash e Groq `openai/gpt-oss-120b`**. As duas APIs devem aprovar todos os 36 critérios. Não há terceiro auditor, votação, maioria ou substituição automática. Cloudflare não participa desta auditoria. Se qualquer auditor reprovar, falhar, ficar indisponível ou devolver resultado incompleto, o conteúdo fica bloqueado e aguarda revisão/reexecução válida.
+Para este projeto, o modelo adotado por decisão do proprietário é de **exatamente duas auditorias independentes entre Gemini, Groq e Cloudflare**. Os pares permitidos são Gemini + Groq, Cloudflare + Groq e Cloudflare + Gemini. As duas APIs selecionadas devem aprovar todos os 36 critérios. Não há terceiro auditor, votação, maioria ou aprovação parcial. Se menos de duas APIs estiverem disponíveis, a auditoria fica pausada até que duas retornem.
 
 | Auditoria A | Auditoria B | Resultado |
 |---|---|---|
@@ -24,7 +24,7 @@ Para este projeto, o modelo adotado é de **exatamente duas auditorias obrigató
 | reprovada | reprovada | bloqueado |
 | dúvida, erro ou ausência de resposta | qualquer resultado | bloqueado |
 
-Gemini e Groq são os dois auditores fixos definidos pelo proprietário do projeto. Cada um deve justificar individualmente os 36 resultados com evidências. Nenhuma API adicional entra como voto ou substituto; se um dos dois provedores não puder auditar, o item aguarda.
+As duas APIs selecionadas são os auditores válidos daquele ciclo. Cada uma deve justificar individualmente os 36 resultados com evidências. Quando uma API ficar indisponível, outra entre as três pode substituí-la; se duas estiverem indisponíveis, o item aguarda. Um estudo já aprovado não precisa ser reauditado quando uma API retornar.
 
 Se os auditores discordarem, o conteúdo volta para revisão e nova versão. A divergência não será resolvida por votação e não será tratada como aprovação parcial.
 
@@ -76,7 +76,7 @@ Nenhum estudo deve ir para o aplicativo se qualquer auditor estiver `fail`, `unk
 
 ### 4. Publicação após a aprovação dupla
 
-Conforme a instrução do proprietário, quando Gemini e Groq aprovarem todos os 36 gates e os validadores determinísticos confirmarem formato, referência e integridade/hash, o conteúdo deve seguir diretamente para publicação no app. Não há uma terceira aprovação, voto de desempate ou revisão humana obrigatória no fluxo padrão.
+Conforme a instrução do proprietário, quando qualquer par válido entre Gemini, Groq e Cloudflare aprovar todos os 36 gates e os validadores determinísticos confirmarem formato, referência e integridade/hash, o conteúdo deve seguir diretamente para publicação no app. Não há uma terceira aprovação, voto de desempate ou revisão humana obrigatória no fluxo padrão.
 
 Uma pessoa responsável ainda pode revisar ou retirar conteúdo por decisão do proprietário, mas essa etapa não deve atrasar a publicação automática definida pelo gate duplo.
 
@@ -144,4 +144,4 @@ A API deve ficar em um script, servidor ou CI protegido. A chave nunca deve ser 
 
 Hoje, o projeto ainda não possui estudos auditados pelas APIs nem uma pipeline executável de geração/auditoria/publicação. O validador local de política dos dois auditores e seus testes foram preparados nesta cópia de trabalho. Portanto, a afirmação correta é: **o contrato dos 36 critérios está preservado; nenhum conteúdo passou pelas duas APIs e nada foi publicado como estudo aprovado**.
 
-O próximo passo de alto valor é implementar a pipeline segura com o gerador Qwen/Kaggle e os dois auditores fixos Gemini/Groq, executar o piloto de 88 versículos ainda sem intervalo definido, medir consumo real e publicar automaticamente somente itens com dupla aprovação e hash íntegro.
+O pipeline vigente seleciona automaticamente duas das três APIs disponíveis, executa o piloto de 88 versículos, mede consumo real e publica automaticamente somente itens com dupla aprovação e hash íntegro.

@@ -5,7 +5,8 @@ import { pathToFileURL } from 'node:url';
 const CANONICAL_FILE = '36_criterios_canonicos.json';
 const AUDIT_POLICIES = {
   'gemini-groq': { auditors: ['gemini', 'groq'], label: 'Gemini e Groq' },
-  'cloudflare-groq-temporary': { auditors: ['cloudflare', 'groq'], label: 'Cloudflare e Groq (temporário)' },
+  'cloudflare-groq': { auditors: ['cloudflare', 'groq'], label: 'Cloudflare e Groq' },
+  'cloudflare-gemini': { auditors: ['cloudflare', 'gemini'], label: 'Cloudflare e Gemini' },
 };
 const DECISIONS = new Set(['pass', 'fail', 'review', 'unknown']);
 

@@ -2,7 +2,7 @@
 
 **Projeto:** A Palavra — Aprendendo as Escrituras
 **Data:** 15/10/2026
-**Decisões do proprietário:** usar exatamente Gemini Flash e Groq `openai/gpt-oss-120b` para auditoria; ambos aprovam todos os 36 critérios; publicar diretamente após dupla aprovação e validações; Cloudflare fora da auditoria.
+**Decisão vigente do proprietário:** usar exatamente duas APIs disponíveis entre Gemini, Groq e Cloudflare para auditar os 36 critérios; qualquer par aprovado pode publicar diretamente após dupla aprovação e validações. Se menos de duas estiverem disponíveis, pausar a auditoria. Quando uma API retornar, ela poderá voltar ao par sem reauditar estudos já aprovados.
 
 ## 1. Estado de prontidão
 
@@ -50,18 +50,19 @@ A sandbox não tem Kaggle CLI, token ou sessão Kaggle. Não se alega que a gera
 
 ### Etapa B — chamar as duas auditorias em separado
 
-1. Montar um pedido para Gemini Flash com a passagem-fonte, o texto do estudo e os 36 critérios.
-2. Montar um pedido independente para Groq `openai/gpt-oss-120b` com exatamente a mesma passagem, o mesmo texto e o mesmo contrato.
+1. Detectar quais entre Gemini, Groq e Cloudflare estão disponíveis.
+2. Selecionar exatamente duas APIs; se houver menos de duas, pausar sem publicar.
+3. Montar para cada API selecionada exatamente a mesma passagem, o mesmo texto e o mesmo contrato.
 3. Nenhum auditor vê a resposta ou decisão do outro antes de concluir.
 4. Cada auditor retorna, para cada ID canônico, decisão `pass`, `fail`, `review` ou `unknown` e evidência textual curta ligada ao conteúdo e à passagem.
 5. Armazenar resposta bruta, modelo, IDs de requisição (sem dados sensíveis), horário, uso de tokens, versão do prompt e erros em `evidence/<study_id>/`.
-6. Somente os dois modelos especificados contam. Não usar Cloudflare/Mistral/reserva, terceiro voto, maioria ou substituição automática.
+6. Somente as duas APIs selecionadas contam. Não há terceiro voto, maioria ou aprovação parcial; a substituição entre as três APIs é automática e autorizada pelo proprietário.
 
-Secrets necessários para o fluxo planejado: `GEMINI_API_KEY`, `GROQ_API_KEY`, `KAGGLE_API_TOKEN` (ou credencial Kaggle equivalente). Cloudflare não precisa ser configurada para auditoria. As chaves não podem aparecer no app, logs, artifacts públicos, ZIP ou chat.
+Secrets necessários: `GEMINI_APK_KEY`/`GEMINI_API_KEY`, `GROQ_API_KEY`, `CLOUDFLARE_AI_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`. As chaves não podem aparecer no app, logs, artifacts públicos, ZIP ou chat.
 
 ### Etapa C — gate determinístico
 
-- Exigir exatamente dois auditores e os modelos permitidos.
+- Exigir exatamente dois auditores, formando um dos pares permitidos: Gemini + Groq, Cloudflare + Groq ou Cloudflare + Gemini.
 - Validar JSON, conteúdo não vazio, referência, 36 IDs sem extras, evidência não vazia, data válida e `decision === "pass"` em todas as entradas.
 - Recalcular hash do texto congelado e exigir igualdade com o texto que cada auditor recebeu e com o texto do artefato destinado ao PWA.
 - Resultado `fail`, `review`, `unknown`, erro de transporte, timeout, JSON parcial, 429, cota esgotada ou divergência de hash = `blocked`/pendente. Nunca transformar falha em aprovação.

@@ -95,19 +95,27 @@ function normalizeAudit(raw, model) {
 }
 const evidenceDir = 'runs/piloto-marcos-1-1-3-15/evidence';
 fs.mkdirSync(evidenceDir, { recursive: true });
-const policy = process.env.AUDIT_POLICY || 'gemini-groq';
-const temporary = policy === 'cloudflare-groq-temporary';
-if (!process.env.GROQ_API_KEY || (temporary ? (!process.env.CLOUDFLARE_ACCOUNT_ID || !process.env.CLOUDFLARE_AI_TOKEN) : !process.env.GEMINI_API_KEY)) throw new Error(temporary ? 'Secrets Cloudflare e Groq são obrigatórios; nenhum conteúdo será publicado' : 'Secrets GEMINI_API_KEY e GROQ_API_KEY são obrigatórios; nenhum conteúdo será publicado');
+const available = [
+  process.env.GEMINI_API_KEY ? 'gemini' : null,
+  process.env.GROQ_API_KEY ? 'groq' : null,
+  process.env.CLOUDFLARE_AI_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? 'cloudflare' : null,
+].filter(Boolean);
+if (available.length < 2) throw new Error('Auditoria pausada: são necessárias pelo menos duas APIs disponíveis entre Gemini, Groq e Cloudflare');
+const auditors = available.length === 3 ? ['gemini', 'groq'] : available;
+const policy = auditors.slice().sort().join('-');
+const callProvider = (provider, prompt, mode) => provider === 'gemini' ? gemini(prompt, mode) : provider === 'groq' ? groq(prompt) : cloudflare(prompt, mode);
 const generationInput = JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema });
-const generated = temporary ? await cloudflare(generationInput, 'generation') : await gemini(generationInput, 'generation');
+const generationProvider = available.includes('cloudflare') ? 'cloudflare' : available[0];
+const generated = await callProvider(generationProvider, generationInput, 'generation');
 assertDraft(generated);
 const content = JSON.stringify(generated, null, 2);
 const prompt = gatePrompt(content);
-const firstAudit = temporary
-  ? normalizeAudit(await cloudflare(prompt, 'audit'), `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`)
-  : normalizeAudit(await gemini(prompt, 'audit'), process.env.GEMINI_MODEL || 'gemini-3.8-flash');
-const groqAudit = normalizeAudit(await groq(prompt), 'openai/gpt-oss-120b');
-const pkg = { audit_policy: policy, study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits: temporary ? { cloudflare: firstAudit, groq: groqAudit } : { gemini: firstAudit, groq: groqAudit } };
+const audits = {};
+for (const auditor of auditors) {
+  const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
+  audits[auditor] = normalizeAudit(await callProvider(auditor, prompt, 'audit'), model);
+}
+const pkg = { audit_policy: policy, study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits };
 fs.writeFileSync(`${evidenceDir}/audit-package.json`, JSON.stringify(pkg, null, 2) + '\n');
 const validation = await import('../scripts/validate-audit-package.mjs');
 const result = validation.validateAuditPackage(pkg, gateIds);
