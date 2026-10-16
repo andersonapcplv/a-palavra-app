@@ -1,6 +1,9 @@
 name: Auditar e publicar piloto
 
 on:
+  push:
+    branches:
+      - manus/audit-pilot-no-kaggle-20261016
   workflow_dispatch:
 
 permissions:
