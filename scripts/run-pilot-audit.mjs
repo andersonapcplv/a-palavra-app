@@ -96,7 +96,8 @@ async function cloudflare(prompt, mode = 'generation') {
   const response = await fetch(url, { method: 'POST', headers: { authorization: `Bearer ${process.env.CLOUDFLARE_AI_TOKEN}`, 'content-type': 'application/json' }, body: JSON.stringify({ model, temperature: 0.1, response_format: { type: 'json_object' }, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }] }) });
   if (!response.ok) throw new Error(`Cloudflare HTTP ${response.status}: ${await response.text()}`);
   const data = await response.json();
-  const text = data.choices?.[0]?.message?.content || data.output_text || data.result?.response || data.response || data.result || data.output || '';
+  const message = data.choices?.[0]?.message || {};
+  const text = message.content || message.reasoning_content || message.reasoning || data.output_text || data.result?.response || data.response || data.result || data.output || '';
   try { return jsonFromText(text); } catch (error) { throw new Error(`Cloudflare não retornou JSON; campos recebidos: ${JSON.stringify(responseShape(data))}; ${error.message}`); }
 }
 function normalizeAudit(raw, model) {
