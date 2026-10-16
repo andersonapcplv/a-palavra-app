@@ -1,15 +1,15 @@
-# Créditos e características do áudio
+# Créditos e licença do áudio
 
-**Faixa:** “Paz e Reflexão”
-**Autoria:** composição instrumental original do projeto A Palavra
-**Arquivo:** `assets/audio/palavra-paz-reflexao.ogg`
-**Formato/duração/tamanho:** Ogg Opus, aproximadamente 4 minutos, 2.569.296 bytes.
-**SHA-256:** `eba31b9dc3d855b015fa184e964dcf85fb27ecddf5e4ca176876d440f258022c`
+**Faixa:** “Art Of Silence V2”
+**Autor:** Uniq
+**Licença:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+**Página da faixa:** https://commons.wikimedia.org/wiki/File:Uniq_-_Art_Of_Silence_V2.ogg
+**Licença:** https://creativecommons.org/licenses/by/4.0/
+**Arquivo incluído:** `assets/audio/uniq-art-of-silence-v2.ogg`
+**Duração:** aproximadamente 4 min 13 s
+**Tamanho:** 2.124.894 bytes
+**SHA-256:** `5d4d074a62d3d8ed33ab79808c242473ed21ac293fbab17dfe639a1544c9804f`
 
-A faixa foi criada localmente para este aplicativo, sem chamada a serviço de geração e sem consumo de créditos Manus. Esta revisão foi feita especificamente para eliminar a sensação de zumbido prolongado: não há drone grave contínuo, bateria, ritmo marcado ou voz.
+A obra é distribuída sob CC BY 4.0. O aplicativo mantém a atribuição, o link da fonte e o link da licença. O arquivo é usado sem alteração.
 
-A composição usa eventos suaves e espaçados de camadas harmônicas em registro médio/agudo, pequenos acentos muito discretos e uma camada de ar filtrado em volume baixo. Os eventos têm início e desaparecimento graduais, deixando pausas naturais entre eles para que o áudio funcione como ambiente de reflexão, não como uma melodia insistente.
-
-Não há dependência de licença externa. O arquivo foi codificado em Ogg Opus para manter o cache offline pequeno.
-
-O áudio permanece opcional, desligado por padrão, sem autoplay e com volume limitado. A reprodução só começa após ação do usuário.
+O áudio é opcional, começa somente após ação do usuário, não possui autoplay e tem volume limitado pelo controle com máximo de 30%. A preferência de volume fica em `ap-music-volume-v3`; o estado de música permanece desligado por padrão.

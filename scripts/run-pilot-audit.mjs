@@ -1,0 +1,68 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+
+const root = process.cwd();
+const input = JSON.parse(fs.readFileSync('runs/piloto-marcos-1-1-3-15/generation-input.json', 'utf8'));
+const canonical = JSON.parse(fs.readFileSync('36_criterios_canonicos.json', 'utf8'));
+const gateIds = canonical.gates.map((gate) => gate.id);
+const required = ['title', 'objective', 'context', 'explanation', 'reflection_questions', 'application', 'summary', 'prayer'];
+
+function jsonFromText(text) {
+  const clean = String(text).trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+  return JSON.parse(clean);
+}
+function assertDraft(draft) {
+  if (!draft || typeof draft !== 'object' || Array.isArray(draft)) throw new Error('rascunho não é objeto');
+  for (const field of required) if (!(field in draft)) throw new Error(`campo ausente no rascunho: ${field}`);
+  if (!Array.isArray(draft.reflection_questions) || draft.reflection_questions.length !== 3) throw new Error('reflection_questions deve conter exatamente 3 itens');
+}
+function gatePrompt(content) {
+  return `Audite o estudo abaixo contra os 36 critérios canônicos. Retorne SOMENTE JSON válido no formato {"gates":{"ID":{"decision":"pass|fail|review|unknown","evidence":"evidência curta"}}}. Inclua exatamente todos os IDs, sem extras. Não aprove por falta de evidência. A evidência deve relacionar o estudo à passagem fornecida.\n\nREFERÊNCIA: ${input.reference}\nPASSAGEM:\n${input.source_passage.map((v) => `${v.reference}: ${v.text}`).join('\n')}\n\nESTUDO:\n${content}\n\nCRITÉRIOS:\n${canonical.gates.map((g) => `${g.id}: ${g.explanation_pt_br}`).join('\n')}`;
+}
+async function gemini(prompt, mode = 'generation') {
+  const model = process.env.GEMINI_MODEL || 'gemini-3-flash-preview';
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(process.env.GEMINI_API_KEY)}`;
+  const system = mode === 'generation'
+    ? 'Gere um rascunho editorial em português brasileiro. Retorne somente JSON com title, objective, context, explanation, reflection_questions (3), application, summary e prayer. Não declare aprovação.'
+    : 'Você é um auditor independente. Retorne somente JSON válido e não faça comentários fora do JSON.';
+  const response = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: prompt }] }], generationConfig: { temperature: 0.1, responseMimeType: 'application/json' } }) });
+  if (!response.ok) throw new Error(`Gemini HTTP ${response.status}: ${await response.text()}`);
+  const data = await response.json();
+  return jsonFromText(data.candidates?.[0]?.content?.parts?.map((part) => part.text || '').join('') || '');
+}
+async function groq(prompt) {
+  const response = await fetch('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { authorization: `Bearer ${process.env.GROQ_API_KEY}`, 'content-type': 'application/json' }, body: JSON.stringify({ model: 'openai/gpt-oss-120b', temperature: 0.1, response_format: { type: 'json_object' }, messages: [{ role: 'system', content: 'Você é um auditor independente. Retorne somente JSON válido e não faça comentários fora do JSON.' }, { role: 'user', content: prompt }] }) });
+  if (!response.ok) throw new Error(`Groq HTTP ${response.status}: ${await response.text()}`);
+  const data = await response.json();
+  return jsonFromText(data.choices?.[0]?.message?.content || '');
+}
+function normalizeAudit(raw, model) {
+  if (!raw?.gates || typeof raw.gates !== 'object') throw new Error(`${model}: resposta sem gates`);
+  const gates = {};
+  for (const id of gateIds) {
+    const result = raw.gates[id];
+    if (!result) throw new Error(`${model}: gate ausente ${id}`);
+    gates[id] = { decision: result.decision, evidence: String(result.evidence || '') };
+  }
+  return { model, completed_at: new Date().toISOString(), gates };
+}
+const evidenceDir = 'runs/piloto-marcos-1-1-3-15/evidence';
+fs.mkdirSync(evidenceDir, { recursive: true });
+if (!process.env.GEMINI_API_KEY || !process.env.GROQ_API_KEY) throw new Error('Secrets GEMINI_API_KEY e GROQ_API_KEY são obrigatórios; nenhum conteúdo será publicado');
+const generated = await gemini(JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema }), 'generation');
+assertDraft(generated);
+const content = JSON.stringify(generated, null, 2);
+const prompt = gatePrompt(content);
+const geminiAudit = normalizeAudit(await gemini(prompt, 'audit'), process.env.GEMINI_MODEL || 'gemini-3-flash-preview');
+const groqAudit = normalizeAudit(await groq(prompt), 'openai/gpt-oss-120b');
+const pkg = { study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits: { gemini: geminiAudit, groq: groqAudit } };
+fs.writeFileSync(`${evidenceDir}/audit-package.json`, JSON.stringify(pkg, null, 2) + '\n');
+const validation = await import('../scripts/validate-audit-package.mjs');
+const result = validation.validateAuditPackage(pkg, gateIds);
+fs.writeFileSync(`${evidenceDir}/gate-result.json`, JSON.stringify(result, null, 2) + '\n');
+if (!result.valid) { console.error(JSON.stringify(result, null, 2)); process.exit(1); }
+const approved = JSON.parse(fs.readFileSync('content/studies-approved.json', 'utf8'));
+approved.studies = approved.studies.filter((study) => study.id !== input.study_id);
+approved.studies.push({ id: input.study_id, reference: input.reference, ...generated, audit_status: 'approved_for_publication', content_sha256: pkg.content_sha256 });
+fs.writeFileSync('content/studies-approved.json', JSON.stringify(approved, null, 2) + '\n');
+console.log(`APPROVED_FOR_PUBLICATION ${input.study_id} ${pkg.content_sha256}`);

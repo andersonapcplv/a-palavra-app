@@ -1,0 +1,63 @@
+name: Auditar e publicar piloto
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-pilot
+  cancel-in-progress: false
+
+jobs:
+  audit-pilot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar base antes da auditoria
+        run: |
+          node --check app.js
+          node --check sw.js
+          node tests/validate-baseline.mjs
+          node tests/validate-audit-policy.mjs
+          node tests/validate-generation-input.mjs
+
+      - name: Gerar e auditar com Gemini e Groq
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_MODEL: gemini-3-flash-preview
+        run: node scripts/run-pilot-audit.mjs
+
+      - name: Validar alterações após aprovação
+        run: |
+          node tests/validate-baseline.mjs
+          node tests/validate-audit-cli.mjs
+          git diff --check
+
+      - name: Publicar estudo aprovado no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/studies-approved.json runs/piloto-marcos-1-1-3-15/evidence
+          git commit -m "Publish audited Marcos pilot study"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Guardar evidências da auditoria
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: piloto-marcos-audit-evidence-${{ github.run_id }}
+          path: runs/piloto-marcos-1-1-3-15/evidence/
+          if-no-files-found: ignore
+          retention-days: 14

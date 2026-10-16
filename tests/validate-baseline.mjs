@@ -8,7 +8,7 @@ const required = [
   'index.html', 'app.js', 'styles.css', 'sw.js', 'manifest.webmanifest',
   'assets/icon-192.png', 'assets/icon-512.png', 'assets/hero-paz-piloto.webp', 'assets/reflexao-paz-piloto.webp', 'assets/quadro-institucional-piloto.webp',
   'data/biblia-livre-n4.json', 'data/marcos-n4.json', 'data/biblia-livre-n4-origem.json',
-  'assets/audio/palavra-paz-reflexao.ogg', 'docs/AUDIO_CREDITS.md',
+  'assets/audio/uniq-art-of-silence-v2.ogg', 'docs/AUDIO_CREDITS.md',
   '36_criterios_canonicos.json', 'content/studies-approved.json'
 ];
 for (const file of required) if (!fs.existsSync(file)) fail(`arquivo ausente: ${file}`);
@@ -34,7 +34,7 @@ const serviceWorker = fs.readFileSync('sw.js', 'utf8');
 const appSource = fs.readFileSync('app.js', 'utf8');
 const studies = readJson('content/studies-approved.json');
 if (studies.schema_version !== 1 || !Array.isArray(studies.studies)) fail('manifesto de estudos inválido');
-if (!serviceWorker.includes("const CACHE = 'a-palavra-v0.9.3'")) fail('versão esperada do cache não encontrada');
+if (!serviceWorker.includes("const CACHE = 'a-palavra-v0.9.4'")) fail('versão esperada do cache não encontrada');
 if (!serviceWorker.includes("url.search = ''")) fail('service worker não normaliza parâmetros de versão');
 if (!serviceWorker.includes('cacheResponse(request, response)')) fail('service worker não atualiza o cache após buscar recursos');
 if (!appSource.includes('bibleHighlights')) fail('persistência de marcações de versículos não encontrada');
