@@ -98,7 +98,7 @@ async function cloudflare(prompt, mode = 'generation') {
   const data = await response.json();
   const message = data.choices?.[0]?.message || {};
   const text = message.content || message.reasoning_content || message.reasoning || data.output_text || data.result?.response || data.response || data.result || data.output || '';
-  try { return jsonFromText(text); } catch (error) { throw new Error(`Cloudflare não retornou JSON; campos recebidos: ${JSON.stringify(responseShape(data))}; ${error.message}`); }
+  try { return jsonFromText(text); } catch (error) { const preview = typeof text === 'string' ? text.slice(0, 160).replace(/\s+/g, ' ') : ''; throw new Error(`Cloudflare não retornou JSON; campos recebidos: ${JSON.stringify(responseShape(data))}; tamanho=${typeof text === 'string' ? text.length : 0}; prefixo=${JSON.stringify(preview)}; ${error.message}`); }
 }
 function normalizeAudit(raw, model) {
   if (!raw?.gates || typeof raw.gates !== 'object') throw new Error(`${model}: resposta sem gates`);
