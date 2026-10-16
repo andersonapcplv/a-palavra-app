@@ -71,6 +71,18 @@ async function groq(prompt) {
   const data = await response.json();
   return jsonFromText(data.choices?.[0]?.message?.content || '');
 }
+async function cloudflare(prompt, mode = 'generation') {
+  if (!process.env.CLOUDFLARE_ACCOUNT_ID || !process.env.CLOUDFLARE_AI_TOKEN) throw new Error('Secrets CLOUDFLARE_ACCOUNT_ID e CLOUDFLARE_AI_TOKEN são obrigatórios no modo temporário');
+  const model = process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b';
+  const url = `https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(process.env.CLOUDFLARE_ACCOUNT_ID)}/ai/v1/chat/completions`;
+  const system = mode === 'generation'
+    ? 'Gere um rascunho editorial em português brasileiro. Retorne somente JSON com title, objective, context, explanation, reflection_questions (3), application, summary e prayer. Não declare aprovação.'
+    : 'Você é um auditor independente. Retorne somente JSON válido e não faça comentários fora do JSON.';
+  const response = await fetch(url, { method: 'POST', headers: { authorization: `Bearer ${process.env.CLOUDFLARE_AI_TOKEN}`, 'content-type': 'application/json' }, body: JSON.stringify({ model, temperature: 0.1, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }] }) });
+  if (!response.ok) throw new Error(`Cloudflare HTTP ${response.status}: ${await response.text()}`);
+  const data = await response.json();
+  return jsonFromText(data.choices?.[0]?.message?.content || '');
+}
 function normalizeAudit(raw, model) {
   if (!raw?.gates || typeof raw.gates !== 'object') throw new Error(`${model}: resposta sem gates`);
   const gates = {};
@@ -83,14 +95,19 @@ function normalizeAudit(raw, model) {
 }
 const evidenceDir = 'runs/piloto-marcos-1-1-3-15/evidence';
 fs.mkdirSync(evidenceDir, { recursive: true });
-if (!process.env.GEMINI_API_KEY || !process.env.GROQ_API_KEY) throw new Error('Secrets GEMINI_API_KEY e GROQ_API_KEY são obrigatórios; nenhum conteúdo será publicado');
-const generated = await gemini(JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema }), 'generation');
+const policy = process.env.AUDIT_POLICY || 'gemini-groq';
+const temporary = policy === 'cloudflare-groq-temporary';
+if (!process.env.GROQ_API_KEY || (temporary ? (!process.env.CLOUDFLARE_ACCOUNT_ID || !process.env.CLOUDFLARE_AI_TOKEN) : !process.env.GEMINI_API_KEY)) throw new Error(temporary ? 'Secrets Cloudflare e Groq são obrigatórios; nenhum conteúdo será publicado' : 'Secrets GEMINI_API_KEY e GROQ_API_KEY são obrigatórios; nenhum conteúdo será publicado');
+const generationInput = JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema });
+const generated = temporary ? await cloudflare(generationInput, 'generation') : await gemini(generationInput, 'generation');
 assertDraft(generated);
 const content = JSON.stringify(generated, null, 2);
 const prompt = gatePrompt(content);
-const geminiAudit = normalizeAudit(await gemini(prompt, 'audit'), process.env.GEMINI_MODEL || 'gemini-3-flash-preview');
+const firstAudit = temporary
+  ? normalizeAudit(await cloudflare(prompt, 'audit'), `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`)
+  : normalizeAudit(await gemini(prompt, 'audit'), process.env.GEMINI_MODEL || 'gemini-3.8-flash');
 const groqAudit = normalizeAudit(await groq(prompt), 'openai/gpt-oss-120b');
-const pkg = { study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits: { gemini: geminiAudit, groq: groqAudit } };
+const pkg = { audit_policy: policy, study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits: temporary ? { cloudflare: firstAudit, groq: groqAudit } : { gemini: firstAudit, groq: groqAudit } };
 fs.writeFileSync(`${evidenceDir}/audit-package.json`, JSON.stringify(pkg, null, 2) + '\n');
 const validation = await import('../scripts/validate-audit-package.mjs');
 const result = validation.validateAuditPackage(pkg, gateIds);
@@ -98,6 +115,6 @@ fs.writeFileSync(`${evidenceDir}/gate-result.json`, JSON.stringify(result, null,
 if (!result.valid) { console.error(JSON.stringify(result, null, 2)); process.exit(1); }
 const approved = JSON.parse(fs.readFileSync('content/studies-approved.json', 'utf8'));
 approved.studies = approved.studies.filter((study) => study.id !== input.study_id);
-approved.studies.push({ id: input.study_id, reference: input.reference, ...generated, audit_status: 'approved_for_publication', content_sha256: pkg.content_sha256 });
+approved.studies.push({ id: input.study_id, reference: input.reference, ...generated, audit_policy: policy, audit_status: 'approved_for_publication', content_sha256: pkg.content_sha256 });
 fs.writeFileSync('content/studies-approved.json', JSON.stringify(approved, null, 2) + '\n');
 console.log(`APPROVED_FOR_PUBLICATION ${input.study_id} ${pkg.content_sha256}`);
