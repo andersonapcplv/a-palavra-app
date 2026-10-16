@@ -9,7 +9,34 @@ const required = ['title', 'objective', 'context', 'explanation', 'reflection_qu
 
 function jsonFromText(text) {
   const clean = String(text).trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
-  return JSON.parse(clean);
+  try { return JSON.parse(clean); } catch {}
+  for (let start = 0; start < clean.length; start += 1) {
+    if (clean[start] !== '{' && clean[start] !== '[') continue;
+    const opening = clean[start];
+    const closing = opening === '{' ? '}' : ']';
+    let depth = 0;
+    let quoted = false;
+    let escaped = false;
+    for (let end = start; end < clean.length; end += 1) {
+      const char = clean[end];
+      if (quoted) {
+        if (escaped) escaped = false;
+        else if (char === '\\') escaped = true;
+        else if (char === '"') quoted = false;
+        continue;
+      }
+      if (char === '"') { quoted = true; continue; }
+      if (char === opening) depth += 1;
+      else if (char === closing) {
+        depth -= 1;
+        if (depth === 0) {
+          try { return JSON.parse(clean.slice(start, end + 1)); } catch {}
+          break;
+        }
+      }
+    }
+  }
+  throw new Error('Resposta não contém um JSON válido');
 }
 function assertDraft(draft) {
   if (!draft || typeof draft !== 'object' || Array.isArray(draft)) throw new Error('rascunho não é objeto');
