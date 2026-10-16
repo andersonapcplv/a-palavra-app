@@ -1,4 +1,4 @@
-const CACHE = 'a-palavra-v0.9.2';
+const CACHE = 'a-palavra-v0.9.3';
 const CORE = [
   './',
   './index.html',

@@ -1,25 +1,17 @@
 # Referências para música ambiente calma
 
-## Faixa avaliada
+## Decisão atual
 
-**Echoes Of Home**, de Scott Buckley.
+A faixa publicada é **“Paz e Reflexão”**, composição instrumental original do projeto A Palavra. Ela foi criada localmente, sem API de geração e sem consumo de créditos Manus.
 
-Fonte oficial: https://www.scottbuckley.com.au/library/echoes-of-home/
+O arquivo atual é `assets/audio/palavra-paz-reflexao.ogg`. A revisão removeu o drone grave contínuo que causava sensação de zumbido. A faixa usa eventos harmônicos curtos e espaçados, pequenos acentos discretos e pausas naturais.
 
-A página oficial descreve a faixa como “a warm, nostalgic orchestral track with the gentle vibes similar to the Zelda games, and Studio Ghibli films”. A mesma página informa que a obra está sob **Creative Commons Attribution 4.0 International (CC BY 4.0)**, com uso permitido inclusive em projetos comerciais desde que o autor seja creditado.
+Os detalhes técnicos estão em `docs/AUDIO_CREDITS.md`.
 
-Atribuição indicada pelo autor: “Echoes Of Home” by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au
+## Referências externas avaliadas anteriormente
 
-Download oficial identificado na página: https://www.scottbuckley.com.au/library/wp-content/uploads/2025/05/EchoesOfHome.mp3
-
-## Outra referência consultada
-
-**Ambient Meditation**, de Scott Holmes Music.
-
-Fonte: https://freemusicarchive.org/music/Scott_Holmes/media-music-mix/ambient-meditation/
-
-A página descreve a faixa como calma e meditativa, mas a licença é **CC BY-NC 4.0**. Como o aplicativo possui apoio voluntário/Pix e a redistribuição offline deve ser simples e segura, essa faixa não foi escolhida.
+Foram avaliadas faixas de Scott Buckley e Scott Holmes Music. Elas não foram mantidas no aplicativo porque o resultado desejado é um fundo muito discreto e controlado, e não uma música externa com caráter orquestral ou melódico mais evidente.
 
 ## Critério adotado
 
-Não usar faixas apenas descritas como “sem copyright”. A licença individual precisa permitir redistribuição e ser registrada com autor, fonte, licença, hash e indicação de eventual transcodificação.
+A música deve ficar atrás da leitura. Não pode ter bateria, voz, ritmo marcado, drone grave contínuo ou volume que concorra com o texto. Deve ser opcional, iniciar apenas após ação do usuário e funcionar offline.
