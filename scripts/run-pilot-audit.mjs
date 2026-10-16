@@ -47,6 +47,12 @@ function jsonFromText(text) {
   }
   throw new Error('Resposta não contém um JSON válido');
 }
+function responseShape(value, depth = 0) {
+  if (depth > 3 || value === null) return value === null ? 'null' : typeof value;
+  if (Array.isArray(value)) return { array: value.length, item: value.length ? responseShape(value[0], depth + 1) : null };
+  if (typeof value === 'object') return Object.fromEntries(Object.keys(value).slice(0, 20).map((key) => [key, responseShape(value[key], depth + 1)]));
+  return typeof value;
+}
 function assertDraft(draft) {
   if (!draft || typeof draft !== 'object' || Array.isArray(draft)) throw new Error('rascunho não é objeto');
   for (const field of required) if (!(field in draft)) throw new Error(`campo ausente no rascunho: ${field}`);
@@ -91,7 +97,7 @@ async function cloudflare(prompt, mode = 'generation') {
   if (!response.ok) throw new Error(`Cloudflare HTTP ${response.status}: ${await response.text()}`);
   const data = await response.json();
   const text = data.choices?.[0]?.message?.content || data.output_text || data.result?.response || data.response || data.result || data.output || '';
-  return jsonFromText(text);
+  try { return jsonFromText(text); } catch (error) { throw new Error(`Cloudflare não retornou JSON; campos recebidos: ${JSON.stringify(responseShape(data))}; ${error.message}`); }
 }
 function normalizeAudit(raw, model) {
   if (!raw?.gates || typeof raw.gates !== 'object') throw new Error(`${model}: resposta sem gates`);
