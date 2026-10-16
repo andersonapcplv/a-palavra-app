@@ -93,7 +93,7 @@ async function cloudflare(prompt, mode = 'generation') {
   const system = mode === 'generation'
     ? 'Gere um rascunho editorial em português brasileiro. Retorne somente JSON com title, objective, context, explanation, reflection_questions (3), application, summary e prayer. Não declare aprovação.'
     : 'Você é um auditor independente. Retorne somente JSON válido e não faça comentários fora do JSON.';
-  const response = await fetch(url, { method: 'POST', headers: { authorization: `Bearer ${process.env.CLOUDFLARE_AI_TOKEN}`, 'content-type': 'application/json' }, body: JSON.stringify({ model, temperature: 0.1, response_format: { type: 'json_object' }, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }] }) });
+  const response = await fetch(url, { method: 'POST', headers: { authorization: `Bearer ${process.env.CLOUDFLARE_AI_TOKEN}`, 'content-type': 'application/json' }, body: JSON.stringify({ model, temperature: 0.1, messages: [{ role: 'system', content: system }, { role: 'user', content: prompt }] }) });
   if (!response.ok) throw new Error(`Cloudflare HTTP ${response.status}: ${await response.text()}`);
   const data = await response.json();
   const message = data.choices?.[0]?.message || {};
