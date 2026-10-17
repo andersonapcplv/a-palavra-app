@@ -20,6 +20,25 @@
       "audit_policy": "cloudflare-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "2a4535c9643a51c1ff3d92871c57d25efb499b43bcf45cc2825937aa25e45d7b"
+    },
+    {
+      "id": "estudo-genesis-1",
+      "reference": "Gênesis 1:1-1:31",
+      "title": "A Criação do Mundo",
+      "objective": "Compreender a narrativa da criação do mundo segundo Gênesis 1",
+      "context": "O livro de Gênesis começa com a descrição da criação do mundo por Deus, destacando a ordem e o propósito na criação.",
+      "explanation": "A criação é apresentada em seis dias, com Deus separando a luz das trevas, criando os céus, a terra, as águas, os seres vivos e, finalmente, o ser humano à sua imagem. Cada dia termina com a afirmação de que o que Deus fez era bom.",
+      "reflection_questions": [
+        "Qual é o significado da criação do mundo em seis dias?",
+        "Como a criação do ser humano à imagem de Deus nos ajuda a entender nosso propósito?",
+        "De que maneira a ordem e o propósito na criação podem influenciar nossa visão de mundo?"
+      ],
+      "application": "A compreensão da criação nos ajuda a valorizar a vida e a nos reconhecer como guardiões da terra, com a responsabilidade de cuidar do mundo criado por Deus.",
+      "summary": "Gênesis 1 apresenta a criação do mundo como um ato ordenado e cheio de propósito por parte de Deus, culminando com a criação do ser humano à sua imagem.",
+      "prayer": "Deus criador, ajuda-nos a apreciar a beleza e a complexidade da tua criação e a viver de acordo com o propósito para o qual fomos criados.",
+      "audit_policy": "gemini-groq",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "350a9ea130e54a1a2bdedf408e0c40491008c78837934dfabb7fc5eeee786266"
     }
   ]
 }

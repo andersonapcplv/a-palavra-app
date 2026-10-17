@@ -1,0 +1,309 @@
+{
+  "audit_policy": "gemini-groq",
+  "study_id": "estudo-genesis-1",
+  "reference": "Gênesis 1:1-1:31",
+  "content": "{\n  \"title\": \"A Criação do Mundo\",\n  \"objective\": \"Compreender a narrativa da criação do mundo segundo Gênesis 1\",\n  \"context\": \"O livro de Gênesis começa com a descrição da criação do mundo por Deus, destacando a ordem e o propósito na criação.\",\n  \"explanation\": \"A criação é apresentada em seis dias, com Deus separando a luz das trevas, criando os céus, a terra, as águas, os seres vivos e, finalmente, o ser humano à sua imagem. Cada dia termina com a afirmação de que o que Deus fez era bom.\",\n  \"reflection_questions\": [\n    \"Qual é o significado da criação do mundo em seis dias?\",\n    \"Como a criação do ser humano à imagem de Deus nos ajuda a entender nosso propósito?\",\n    \"De que maneira a ordem e o propósito na criação podem influenciar nossa visão de mundo?\"\n  ],\n  \"application\": \"A compreensão da criação nos ajuda a valorizar a vida e a nos reconhecer como guardiões da terra, com a responsabilidade de cuidar do mundo criado por Deus.\",\n  \"summary\": \"Gênesis 1 apresenta a criação do mundo como um ato ordenado e cheio de propósito por parte de Deus, culminando com a criação do ser humano à sua imagem.\",\n  \"prayer\": \"Deus criador, ajuda-nos a apreciar a beleza e a complexidade da tua criação e a viver de acordo com o propósito para o qual fomos criados.\"\n}",
+  "content_sha256": "350a9ea130e54a1a2bdedf408e0c40491008c78837934dfabb7fc5eeee786266",
+  "audits": {
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-17T03:53:58.075Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "O estudo reflete fielmente os relatos da criação nos seis dias e a imagem de Deus descritos em Gn 1:1-31."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Contextualiza adequadamente a abertura do livro de Gênesis e a criação do cosmos."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Mantém-se dentro do escopo de Gênesis 1:1-31 sem incorporar elementos externos como Gênesis 2."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Trata a narrativa da criação respeitando a voz narrativa e o agir divino conforme o texto."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Aborda o texto em harmonia com o gênero narrativo cosmogônico e ordenado de Gênesis 1."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Descreve os atos criativos sucessivos e a avaliação divina de forma coerente com o relato bíblico."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Preserva a estrutura sequencial dos seis dias culminando na criação da humanidade."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente Deus como Criador e o ser humano criado à sua imagem (Gn 1:26-27)."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Não faz citações literais confusas; resume e parafraseia claramente o conteúdo do texto."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações principais estão ancoradas diretamente no texto de Gênesis 1."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Não introduz especulações desmedidas além do propósito e ordem manifestos na criação."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe dogmas extrabíblicos ou interpretações teológicas forçadas."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Não força tipologia cristológica anacrônica inexistente no texto hebraico de Gn 1."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não cria falsas promessas nem desvirtua declarações divinas."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não confunde ou extrapola alianças não mencionadas no capítulo."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Deriva a responsabilidade humana do mandato de domínio/cuidado presente em Gn 1:26-28."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não trata a narrativa criacional como profecia preditiva indevida."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não usa os atos criativos para prometer intervenções miraculosas automáticas."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita a bênção original da criação sem universalizações distorcidas."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não introduz ameaças ou juízos alheios ao texto de Gn 1."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "A oração foca no reconhecimento de Deus como Criador em consonância com a passagem."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não aborda jejum, mantendo-se fiel ao foco temático da criação."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "A aplicação de cuidar da criação decorre do domínio confiado ao ser humano em Gn 1:28."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Mensagem edificante, sem indução de medo, culpa ou manipulação psicológica."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima abusos; ressalta o valor da vida e o cuidado responsável com o mundo."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não faz alegações médicas nem desaconselha cuidados de saúde."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não envolve promessas financeiras ou teologia da prosperidade."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Não direciona revelações ou profecias pessoais particulares ao leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não inventa falas divinas nem atribui a Deus palavras ausentes do relato."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "O texto apresenta redação natural e articulada, sem jargões de preenchimento de modelo."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Explica o texto sem copiar blocos literais da passagem como substituto da análise."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura equilibrada com seções distintas e complementares."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "A aplicação vincula-se explicitamente ao papel da humanidade como guardiã da criação de Deus."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "A oração louva o 'Deus criador' e pede auxílio para cumprir o propósito da criação."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Há harmonia temática e conceitual clara entre objetivo, explicação, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara, fluida, gramaticalmente correta e de fácil compreensão."
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-17T03:54:03.694Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Explanation matches Genesis 1:1‑31 events"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Keeps Genesis context without shifting meaning"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "No content beyond Genesis 1"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Narrator does not misattribute God's speech"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Expository study fits narrative genre"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Events follow Genesis account"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Days ordered as in passage"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Correctly identifies God, humans, creatures"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paraphrase clearly distinguished from text"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "All statements have scriptural support"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretations stay within text limits"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "No doctrine imposed beyond passage"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "No Christological reading added"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "No promises asserted"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "No covenant language introduced"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Commands not presented as new obligations"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "No prophetic claims made"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Creation miracle presented only as biblical event"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Benedictions stay within biblical recipients"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "No judgments added"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Prayer reflects creation theme without promised answer"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Fasting not addressed"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Application of stewardship derives from Genesis mandate"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No harmful pastoral advice"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "No abusive content"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No medical claims"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No financial promises"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "No personal prophecy included"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "No invented divine speech"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Language is contextual, not formulaic"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "No verbatim passage repetition"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Structure varies across sections"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Application ties to stewardship theme"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Prayer linked to creation content"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Explanation, summary, application, prayer align"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Clear, readable Portuguese"
+        }
+      }
+    }
+  }
+}
