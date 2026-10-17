@@ -1,0 +1,309 @@
+{
+  "audit_policy": "gemini-groq",
+  "study_id": "estudo-genesis-4",
+  "reference": "Gênesis 4:1-4:26",
+  "content": "{\n  \"title\": \"O Primeiro Assassinato e a Linhagem de Caim\",\n  \"objective\": \"Compreender as consequências do pecado e a importância da obediência a Deus\",\n  \"context\": \"Gênesis 4 descreve a história de Caim e Abel, os dois primeiros filhos de Adão e Eva, e como as escolhas de Caim levaram ao primeiro assassinato registrado na Bíblia\",\n  \"explanation\": \"A história começa com a descrição de Caim, que era lavrador, e Abel, que era pastor. Caim trouxe uma oferta ao Senhor, mas não foi aceita, enquanto a oferta de Abel foi aceita. Isso levou Caim a se irritar e, eventualmente, a matar seu irmão Abel. Deus questionou Caim sobre o paradeiro de Abel, e Caim respondeu com desdém. Deus então amaldiçoou Caim, tornando-o um errante e fugitivo na terra\",\n  \"reflection_questions\": [\n    \"O que podemos aprender com a história de Caim e Abel sobre a importância de seguir os caminhos de Deus?\",\n    \"Como as consequências do pecado podem afetar nossas vidas e as vidas daqueles ao nosso redor?\",\n    \"De que maneira podemos aplicar a lição de que 'o pecado está à porta' em nossas próprias vidas, reconhecendo a necessidade de dominar os impulsos pecaminosos?\"\n  ],\n  \"application\": \"Devemos buscar viver de acordo com os princípios de Deus, reconhecendo que nossas escolhas têm consequências. A história de Caim nos lembra da importância de buscar a aprovação de Deus em tudo o que fazemos\",\n  \"summary\": \"A história de Caim e Abel nos ensina sobre as consequências do pecado e a importância de seguir os caminhos de Deus. A rejeição da oferta de Caim e a aceitação da oferta de Abel levaram a um ato de violência que teve consequências duradouras\",\n  \"prayer\": \"Deus, ajuda-nos a buscar Teu caminho e a viver de acordo com Teus princípios. Protege-nos do pecado e de suas consequências, e ensina-nos a dominar os impulsos pecaminosos em nossas vidas\"\n}",
+  "content_sha256": "cde505724fa8d5bd6bd49028cd5b9d766ea258bdb6f4fa748352a7dae16bec43",
+  "audits": {
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-17T04:24:47.910Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Descreve com precisão a narrativa central de Gênesis 4."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém o sentido da narrativa e o contexto dos acontecimentos."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Permanece dentro dos limites de Gênesis 4 sem invasão externa."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Mantém a coerência dos diálogos entre Deus e Caim."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Respeita o gênero narrativo bíblico sem distorções."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos das ofertas, homicídio e punição relatados com exatidão."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Preserva a ordem cronológica dos fatos narrados."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente Caim, Abel e o Senhor."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Usa aspas adequadamente na citação de Gênesis 4:7."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações possuem base no texto de Gênesis 4."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Não ultrapassa o sentido evidente do relato bíblico."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não constrói doutrina dogmática sem base bíblica explícita."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Não força tipologia cristológica artificial ausente do texto."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não extrapola promessas nem cria garantias indevidas."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não confunde nem distorce termos pactualizados."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Aplica o chamado a dominar o pecado com equilíbrio."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza profecias ou cria previsões inexistentes."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não aplica nem generaliza milagres como garantia."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza bênçãos além do texto bíblico."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Retém o julgamento e a punição aplicados a Caim."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração coerente com os ensinos práticos do texto."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não aborda nem distorce o tema do jejum."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicações práticas derivam diretamente da advertência contra o pecado."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Ensino pastoralmente equilibrado e sem indução a culpas abusivas."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Condena o homicídio sem legitimar violência ou abusos."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não faz intervenções nem promessas na área médica."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não faz apelos nem promessas de prosperidade financeira."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Não emite profecias pessoais direcionadas ao leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui falas inventadas a Deus."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto com redação natural e sem fórmulas mecânicas."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Explica o conteúdo sem repeti-lo literalmente de forma redundante."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura bem distribuída entre narrativa, perguntas e oração."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação conectada à exortação bíblica de dominar o pecado."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração tematizada na proteção e domínio sobre impulsos pecaminosos."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Harmonia completa entre explicação, perguntas, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Texto claro, legível e gramaticalmente bem formulado."
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-17T04:24:54.254Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Accurately reflects Genesis 4 narrative"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Maintains original context without distortion"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "No external passages introduced"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Speakers and audience match biblical text"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Narrative treated with appropriate expository genre"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Events follow biblical sequence correctly"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Chronology matches Genesis 4 order"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Correctly identifies Cain, Abel, others"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paraphrase clearly distinguished from direct quotes"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "All statements have scriptural support"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretation stays within textual limits"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "No doctrinal mandates added"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "No Christological claims made"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "No promises referenced"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "No covenant scope violated"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Commands not misapplied"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "No prophetic claims present"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "No miracle assertions included"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Blessings not overgeneralized"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Judgment reflects biblical wording"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Prayer aligns without promised response"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "No fasting content included"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Application logically derived from passage"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Pastoral advice is safe"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "No abusive content present"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No medical advice given"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No financial advice offered"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "No personal prophecy provided"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "No invented divine speech"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Language not template-like"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "No verbatim repetition used"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Structure varied, no redundancy"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Application specific to passage"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Prayer tied to passage themes"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Sections consistent throughout study"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Clear, readable language used"
+        }
+      }
+    }
+  }
+}

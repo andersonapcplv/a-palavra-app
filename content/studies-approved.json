@@ -77,6 +77,25 @@
       "audit_policy": "cloudflare-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "9ce2b3509ffd37c26aea5c1204962b7337c52b85ef05662bfa66d0cf82fd004f"
+    },
+    {
+      "id": "estudo-genesis-4",
+      "reference": "Gênesis 4:1-4:26",
+      "title": "O Primeiro Assassinato e a Linhagem de Caim",
+      "objective": "Compreender as consequências do pecado e a importância da obediência a Deus",
+      "context": "Gênesis 4 descreve a história de Caim e Abel, os dois primeiros filhos de Adão e Eva, e como as escolhas de Caim levaram ao primeiro assassinato registrado na Bíblia",
+      "explanation": "A história começa com a descrição de Caim, que era lavrador, e Abel, que era pastor. Caim trouxe uma oferta ao Senhor, mas não foi aceita, enquanto a oferta de Abel foi aceita. Isso levou Caim a se irritar e, eventualmente, a matar seu irmão Abel. Deus questionou Caim sobre o paradeiro de Abel, e Caim respondeu com desdém. Deus então amaldiçoou Caim, tornando-o um errante e fugitivo na terra",
+      "reflection_questions": [
+        "O que podemos aprender com a história de Caim e Abel sobre a importância de seguir os caminhos de Deus?",
+        "Como as consequências do pecado podem afetar nossas vidas e as vidas daqueles ao nosso redor?",
+        "De que maneira podemos aplicar a lição de que 'o pecado está à porta' em nossas próprias vidas, reconhecendo a necessidade de dominar os impulsos pecaminosos?"
+      ],
+      "application": "Devemos buscar viver de acordo com os princípios de Deus, reconhecendo que nossas escolhas têm consequências. A história de Caim nos lembra da importância de buscar a aprovação de Deus em tudo o que fazemos",
+      "summary": "A história de Caim e Abel nos ensina sobre as consequências do pecado e a importância de seguir os caminhos de Deus. A rejeição da oferta de Caim e a aceitação da oferta de Abel levaram a um ato de violência que teve consequências duradouras",
+      "prayer": "Deus, ajuda-nos a buscar Teu caminho e a viver de acordo com Teus princípios. Protege-nos do pecado e de suas consequências, e ensina-nos a dominar os impulsos pecaminosos em nossas vidas",
+      "audit_policy": "gemini-groq",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "cde505724fa8d5bd6bd49028cd5b9d766ea258bdb6f4fa748352a7dae16bec43"
     }
   ]
 }
