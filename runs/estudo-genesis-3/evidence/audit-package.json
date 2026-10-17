@@ -1,0 +1,309 @@
+{
+  "audit_policy": "cloudflare-groq",
+  "study_id": "estudo-genesis-3",
+  "reference": "Gênesis 3:1-3:24",
+  "content": "{\n  \"title\": \"A Queda do Homem\",\n  \"objective\": \"Compreender as consequências da desobediência de Adão e Eva em relação ao plano de Deus\",\n  \"context\": \"O capítulo 3 de Gênesis descreve a tentação da serpente e a escolha de Adão e Eva em desobedecer a Deus, resultando na perda da inocência e na introdução do pecado na humanidade\",\n  \"explanation\": \"A serpente, mais astuta que todos os animais, questionou a mulher sobre a ordem de Deus, levando-a a duvidar da palavra divina. A mulher, por sua vez, convenceu o homem a comer do fruto proibido, resultando na abertura dos olhos de ambos para a realidade do pecado e da morte. Deus, então, chamou o homem e a mulher para prestar contas de suas ações, e cada um deles tentou justificar sua conduta, atribuindo a culpa a outro. Como consequência, Deus impôs castigos à serpente, à mulher e ao homem, alterando a relação deles com a criação e com Ele mesmo\",\n  \"reflection_questions\": [\n    \"Como a desobediência de Adão e Eva afetou a relação deles com Deus e com a criação?\",\n    \"Quais são as implicações da introdução do pecado na humanidade?\",\n    \"De que maneira podemos aprender com a experiência de Adão e Eva para evitar cair em tentações semelhantes?\"\n  ],\n  \"application\": \"A história de Adão e Eva nos ensina sobre a importância de obedecer à palavra de Deus e de confiar em Sua soberania. Devemos estar atentos às tentações que nos rodeiam e buscar a orientação divina em nossas decisões, para não cairmos em pecado e perdermos a comunhão com Deus\",\n  \"summary\": \"A queda do homem, descrita em Gênesis 3, é um evento crucial na história da humanidade, que introduz o pecado e a morte no mundo. A desobediência de Adão e Eva teve consequências profundas, alterando a relação deles com Deus e com a criação. Através dessa história, podemos aprender lições valiosas sobre a importância da obediência e da confiança em Deus\",\n  \"prayer\": \"Deus, ajuda-nos a entender as consequências da desobediência e a buscar a Tua orientação em nossas vidas. Dá-nos sabedoria para evitar as tentações e para confiar em Tua soberania, para que possamos viver em comunhão contigo e cumprir o Teu plano para nossas vidas\"\n}",
+  "content_sha256": "9ce2b3509ffd37c26aea5c1204962b7337c52b85ef05662bfa66d0cf82fd004f",
+  "audits": {
+    "cloudflare": {
+      "model": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "completed_at": "2026-10-17T04:21:21.964Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Afirmações centrais correspondem"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Respeita contexto anterior"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Não ultrapassa limites"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerente entre falante e ouvinte"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Compatível com narrativa"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos narrados coerentes"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Sequência temporal preservada"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Pessoas e entidades identificadas"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Fronteira clara entre citação"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Sem afirmações sem sustentação"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Sem extrapolações interpretativas"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não transforma inferência em doutrina"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Não impõe leitura cristológica"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita promessas"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita alianças"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita mandamentos"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza profecias"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não generaliza milagres"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza bênçãos"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita juízos"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Ensina oração fielmente"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não distorce jejum"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação prática legítima"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Segurança pastoral"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não substitui cuidado médico"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não oferece promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Não profetiza pessoalmente"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui fala a Deus"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Não usa linguagem mecânica"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Não repete literalmente"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Não repete estruturalmente"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Não aplica genericamente"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Não ora genericamente"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerente entre seções"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara e precisa"
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-17T04:21:37.034Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Explanation matches Genesis 3 narrative"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Maintains original context of temptation and fall"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "No content beyond Genesis 3 added"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Speakers and listeners identified as in text"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Treats passage as narrative, appropriate genre"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Events follow passage order"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Chronology matches Genesis 3"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Correctly names Adam, Eve, serpent, God"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paraphrase, no misattributed quotes"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "All claims supported by text"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretation stays within text"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "No doctrinal claims beyond passage"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "No Christological reading imposed"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "No mis‑scoped promises"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "No covenant misapplied"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Commands presented accurately"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "No prophetic claims"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "No miracle claims"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "No blessings beyond text"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Judgments reflected accurately"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Prayer not claimed to guarantee response"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "No fasting content"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Application logically derived"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Encourages obedience without harmful guilt"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "No abusive language"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No medical advice"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No financial advice"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "No personal prophecy offered"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Divine speech quoted accurately"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Language not purely templated"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "No verbatim repetition used as filler"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Structure varied, no mechanical repetition"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Application linked to passage theme"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Prayer reflects passage themes"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "All sections align with same message"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Clear, readable language"
+        }
+      }
+    }
+  }
+}
