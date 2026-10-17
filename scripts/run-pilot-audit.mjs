@@ -169,6 +169,6 @@ for (let attempt = 1; attempt <= 3; attempt += 1) {
 if (!result?.valid) { console.error(JSON.stringify(result, null, 2)); process.exit(1); }
 const approved = JSON.parse(fs.readFileSync('content/studies-approved.json', 'utf8'));
 approved.studies = approved.studies.filter((study) => study.id !== input.study_id);
-approved.studies.push({ id: input.study_id, reference: input.reference, ...generated, audit_policy: policy, audit_status: 'approved_for_publication', content_sha256: pkg.content_sha256 });
+approved.studies.push({ id: input.study_id, reference: input.reference, ...generated, audit_policy: pkg.audit_policy, audit_status: 'approved_for_publication', content_sha256: pkg.content_sha256 });
 fs.writeFileSync('content/studies-approved.json', JSON.stringify(approved, null, 2) + '\n');
 console.log(`APPROVED_FOR_PUBLICATION ${input.study_id} ${pkg.content_sha256}`);
