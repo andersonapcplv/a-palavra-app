@@ -93,16 +93,17 @@ function openBibleReader(){
 function moveBibleChapter(delta){if(!fullBible)return;selectedChapter+=delta;if(selectedChapter<1){if(selectedBook>0){selectedBook--;selectedChapter=fullBible[selectedBook].chapters.length}else selectedChapter=1}else if(selectedChapter>fullBible[selectedBook].chapters.length){if(selectedBook<fullBible.length-1){selectedBook++;selectedChapter=1}else selectedChapter=fullBible[selectedBook].chapters.length}updateBibleChapter();window.scrollTo(0,0)}
 function goToBibleVerse(){const n=Number($('#verseInput')?.value);if(!Number.isInteger(n)||n<1){notify('Informe um número de versículo válido.');return}if(!$('#v-'+n)){notify('Esse versículo não existe neste capítulo.');return}scrollToBibleVerse(n)}
 let notes=read(KEYS.notes,{}),favorites=read(KEYS.favorites,[]),progress=read(KEYS.progress,[]),page='hoje',installPrompt=null;
-let approvedStudies=null,approvedStudiesPromise=null;
+let approvedStudies=null,approvedStudiesPromise=null,approvedStudiesUpdatedAt=0;
 if(!notes||typeof notes!=='object'||Array.isArray(notes))notes={};
 if(!Array.isArray(favorites))favorites=[];
 if(!Array.isArray(progress))progress=[];
 const done=i=>progress.includes(i),fav=i=>favorites.includes(i);
 function notify(msg){const el=$('#status');el.textContent=msg;el.hidden=false;clearTimeout(notify.t);notify.t=setTimeout(()=>el.hidden=true,4200)}
 const button=(name,action,arg,style='secondary')=>`<button class="action ${style}" data-action="${action}" data-index="${arg}">${name}</button>`;
-async function loadApprovedStudies(){
- if(approvedStudies)return approvedStudies;
- if(!approvedStudiesPromise)approvedStudiesPromise=fetch('./content/studies-approved.json').then(r=>{if(!r.ok)throw Error('Manifesto de estudos indisponível');return r.json()}).then(d=>{if(!d||d.schema_version!==1||!Array.isArray(d.studies))throw Error('Manifesto de estudos inválido');approvedStudies=d.studies;return approvedStudies}).catch(e=>{approvedStudiesPromise=null;throw e});
+async function loadApprovedStudies({refresh=false}={}){
+ const fresh=approvedStudies&&Date.now()-approvedStudiesUpdatedAt<300000;
+ if(approvedStudies&&(!refresh&&fresh||!navigator.onLine))return approvedStudies;
+ if(!approvedStudiesPromise)approvedStudiesPromise=fetch(`./content/studies-approved.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Manifesto de estudos indisponível');return r.json()}).then(d=>{if(!d||d.schema_version!==1||!Array.isArray(d.studies))throw Error('Manifesto de estudos inválido');const changed=approvedStudies&&d.studies.length!==approvedStudies.length;approvedStudies=d.studies;approvedStudiesUpdatedAt=Date.now();if(changed)notify('Novos estudos foram atualizados no aplicativo.');return approvedStudies}).catch(e=>{if(approvedStudies)return approvedStudies;throw e}).finally(()=>{approvedStudiesPromise=null});
  return approvedStudiesPromise;
 }
 function renderApprovedStudies(){

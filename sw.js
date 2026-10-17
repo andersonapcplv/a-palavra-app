@@ -1,4 +1,4 @@
-const CACHE = 'a-palavra-v0.9.4';
+const CACHE = 'a-palavra-v0.9.5';
 const CORE = [
   './',
   './index.html',
@@ -58,6 +58,14 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET' || !sameOrigin(request)) return;
 
   const key = cacheKey(request);
+  if (new URL(request.url).pathname.endsWith('/content/studies-approved.json')) {
+    event.respondWith(
+      fetch(request, { cache: 'no-store' })
+        .then((response) => cacheResponse(request, response))
+        .catch(() => caches.match(key))
+    );
+    return;
+  }
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)

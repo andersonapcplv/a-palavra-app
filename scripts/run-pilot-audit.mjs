@@ -2,7 +2,8 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 
 const root = process.cwd();
-const input = JSON.parse(fs.readFileSync('runs/piloto-marcos-1-1-3-15/generation-input.json', 'utf8'));
+const inputPath = process.env.STUDY_INPUT || 'runs/piloto-marcos-1-1-3-15/generation-input.json';
+const input = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
 const canonical = JSON.parse(fs.readFileSync('36_criterios_canonicos.json', 'utf8'));
 const gateIds = canonical.gates.map((gate) => gate.id);
 const required = ['title', 'objective', 'context', 'explanation', 'reflection_questions', 'application', 'summary', 'prayer'];
@@ -110,7 +111,7 @@ function normalizeAudit(raw, model) {
   }
   return { model, completed_at: new Date().toISOString(), gates };
 }
-const evidenceDir = 'runs/piloto-marcos-1-1-3-15/evidence';
+const evidenceDir = process.env.EVIDENCE_DIR || `runs/${input.study_id}/evidence`;
 fs.mkdirSync(evidenceDir, { recursive: true });
 const available = [
   process.env.GEMINI_API_KEY ? 'gemini' : null,
