@@ -60,7 +60,7 @@ function assertDraft(draft) {
   if (!Array.isArray(draft.reflection_questions) || draft.reflection_questions.length !== 3) throw new Error('reflection_questions deve conter exatamente 3 itens');
 }
 function gatePrompt(content) {
-  return `Audite o estudo abaixo contra os 36 critérios canônicos. Retorne SOMENTE JSON válido no formato {"gates":{"ID":{"decision":"pass|fail|review|unknown","evidence":"evidência curta"}}}. Inclua exatamente todos os IDs, sem extras. Não aprove por falta de evidência. A evidência deve relacionar o estudo à passagem fornecida.\n\nREFERÊNCIA: ${input.reference}\nPASSAGEM:\n${input.source_passage.map((v) => `${v.reference}: ${v.text}`).join('\n')}\n\nESTUDO:\n${content}\n\nCRITÉRIOS:\n${canonical.gates.map((g) => `${g.id}: ${g.explanation_pt_br}`).join('\n')}`;
+  return `Audite o estudo abaixo contra os 36 critérios canônicos. Retorne SOMENTE um objeto JSON, sem markdown, com exatamente esta estrutura: {"gates":{"ID":{"decision":"pass|fail|review|unknown","evidence":"até 12 palavras"}}}. Inclua TODOS os 36 IDs exatamente uma vez, inclusive TARGET_FIDELITY, e não inclua outros campos. Evidência curta e específica é obrigatória; não aprove por falta de evidência.\n\nREFERÊNCIA: ${input.reference}\nPASSAGEM:\n${input.source_passage.map((v) => `${v.reference}: ${v.text}`).join('\n')}\n\nESTUDO:\n${content}\n\nCRITÉRIOS:\n${canonical.gates.map((g) => `${g.id}: ${g.explanation_pt_br}`).join('\n')}`;
 }
 async function gemini(prompt, mode = 'generation') {
   const model = process.env.GEMINI_MODEL || 'gemini-3-flash-preview';
@@ -120,6 +120,14 @@ const available = [
 ].filter(Boolean);
 if (available.length < 2) throw new Error('Auditoria pausada: são necessárias pelo menos duas APIs disponíveis entre Gemini, Groq e Cloudflare');
 const callProvider = (provider, prompt, mode) => provider === 'gemini' ? gemini(prompt, mode) : provider === 'groq' ? groq(prompt) : cloudflare(prompt, mode);
+async function auditWithRetry(provider, prompt, model) {
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try { return normalizeAudit(await callProvider(provider, prompt, 'audit'), model); }
+    catch (error) { lastError = error; if (attempt < 2) await new Promise((resolve) => setTimeout(resolve, 2000)); }
+  }
+  throw lastError;
+}
 const generationInput = JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema });
 const generationProvider = available.includes('cloudflare') ? 'cloudflare' : available[0];
 const generated = await callProvider(generationProvider, generationInput, 'generation');
@@ -135,7 +143,7 @@ for (const pair of pairs) {
     const candidate = {};
     for (const auditor of pair) {
       const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
-      candidate[auditor] = normalizeAudit(await callProvider(auditor, prompt, 'audit'), model);
+      candidate[auditor] = await auditWithRetry(auditor, prompt, model);
     }
     auditors = pair;
     audits = candidate;
