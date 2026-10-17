@@ -1,0 +1,309 @@
+{
+  "audit_policy": "gemini-groq",
+  "study_id": "estudo-genesis-2",
+  "reference": "Gênesis 2:1-2:25",
+  "content": "{\n  \"title\": \"A Criação do Homem e a Instituição do Casamento\",\n  \"objective\": \"Compreender a criação do homem e a instituição do casamento conforme descrito em Gênesis 2\",\n  \"context\": \"Gênesis 2 descreve a criação do homem e a formação da mulher a partir da costela de Adão, bem como a instituição do casamento e a vida no Jardim do Éden\",\n  \"explanation\": \"Deus criou o homem do pó da terra e lhe deu a respiração da vida, tornando-o uma alma vivente. Em seguida, formou a mulher a partir da costela de Adão enquanto ele dormia, e os dois se tornaram uma só carne. A instituição do casamento é apresentada como uma união entre um homem e uma mulher, deixando pai e mãe para se unirem\",\n  \"reflection_questions\": [\n    \"Qual é o propósito da criação do homem e da mulher?\",\n    \"Como a instituição do casamento reflete a relação entre Deus e a humanidade?\",\n    \"De que maneira a descrição do Jardim do Éden influencia nossa compreensão do propósito da vida humana?\"\n  ],\n  \"application\": \"A criação do homem e a instituição do casamento nos ensinam sobre a importância da relação entre os sexos e a união entre um homem e uma mulher. Isso também nos lembra da responsabilidade do homem de cuidar e proteger a terra e todos os seres vivos\",\n  \"summary\": \"Gênesis 2 descreve a criação do homem e a instituição do casamento, destacando a importância da relação entre os sexos e a responsabilidade do homem de cuidar a terra\",\n  \"prayer\": \"Deus, ajuda-nos a compreender e valorizar a criação do homem e a instituição do casamento, e a viver de acordo com o propósito que nos deste\"\n}",
+  "content_sha256": "e0ee2cde48862faa2c8f05471b7fe5c28f1a7e83add90e775ad9770c114fc769",
+  "audits": {
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-17T04:11:00.494Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Afirmações correspondem fielmente à narrativa da criação e casamento em Gn 2."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém o contexto de Gênesis 2 com criação, Éden e união."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Restringe-se aos acontecimentos e elementos descritos em Gn 2:1-25."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente narrador, Deus, Adão e a ordenança matrimonial."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Trata o texto adequadamente como narrativa fundacional da criação."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos de formação do homem, costela e união apresentados coerentemente."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Respeita a ordem da formação do homem, Éden e da mulher."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Deus, Adão e a mulher identificados de acordo com o relato."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Diferencia paráfrases e conceitos sem confundir citações textuais."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as alegações encontram respaldo direto em Gn 2:7, 2:15, 2:21-24."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Não extrapola além do sentido básico da narrativa bíblica examinada."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe dogmas externos sem base no texto analisado."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Não força tipologia cristológica onde o foco é a narrativa original."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não generaliza promessas indevidas a partir da passagem."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Trata a aliança matrimonial nos termos do relato de Gênesis 2."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Guarda e cultivo do jardim apresentados sem ampliação indevida."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não atribui nem inventa profecias a partir da narrativa."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Descreve o ato criativo divino sem promessas milagrosas universais."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza bênçãos além dos limites do texto."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não distorce o aviso sobre a árvore do conhecimento."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração alinhada com compreensão e propósito, sem reivindicações descabidas."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não aborda jejum nem impõe exigências inexistentes."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação em relacionamentos e cuidado ambiental deriva diretamente do texto."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Ensino equilibrado e pastoralmente seguro sobre matrimônio e mordomia."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não promove abuso, violência ou submissão nociva."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Sem alegações médicas ou promessas de cura física."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Sem promessas de prosperidade financeira ou exigências pecuniárias."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Não introduz mensagens proféticas dirigidas ao leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui falas inventadas a Deus."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto autêntico, redigido com naturalidade e sem fórmulas prontas."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Explica o conteúdo em linguagem própria sem mera cópia."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Varia estrutura textual entre seções de modo fluido."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação contextualizada na relação conjugal e cuidado da terra."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração vinculada diretamente aos temas da criação e casamento."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Harmonia entre introdução, explicação, aplicação, resumo e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Texto claro, coeso, gramaticalmente correto e bem estruturado."
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-17T04:11:06.055Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Afirma criação, casamento, cuidado conforme Gênesis 2"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém sentido geral da narrativa de Gênesis 2"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Nenhum conteúdo fora de Gênesis 2"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Não atribui falas a personagens indevidas"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Exposição compatível com narrativa de Gênesis"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos descritos correspondem ao texto"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Sequência temporal mantida"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente Deus, Adão, Eva"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paráfrase sem confundir citação"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas afirmações têm base no texto"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Nenhuma extrapolação além do texto"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não cria doutrina obrigatória"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Sem leitura cristológica artificial"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa atribuída"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem aliança mencionada"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Comando de cuidar jardim refletido"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma profecia incluída"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem milagres citados"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Bênção do sábado não extrapolada"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum juízo inserido"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração não promete resposta específica"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum jejum mencionado"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação deriva do sentido do texto"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma orientação prejudicial"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Sem afirmações médicas"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Sem profecia pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Deus não fala fora do texto"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Linguagem não é modelo vazio"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Não repete texto literalmente"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura não repetitiva"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação específica ao texto"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração ligada ao tema"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerência entre explicação, aplicação e oração"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara e legível"
+        }
+      }
+    }
+  }
+}

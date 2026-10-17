@@ -39,6 +39,25 @@
       "audit_policy": "gemini-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "350a9ea130e54a1a2bdedf408e0c40491008c78837934dfabb7fc5eeee786266"
+    },
+    {
+      "id": "estudo-genesis-2",
+      "reference": "Gênesis 2:1-2:25",
+      "title": "A Criação do Homem e a Instituição do Casamento",
+      "objective": "Compreender a criação do homem e a instituição do casamento conforme descrito em Gênesis 2",
+      "context": "Gênesis 2 descreve a criação do homem e a formação da mulher a partir da costela de Adão, bem como a instituição do casamento e a vida no Jardim do Éden",
+      "explanation": "Deus criou o homem do pó da terra e lhe deu a respiração da vida, tornando-o uma alma vivente. Em seguida, formou a mulher a partir da costela de Adão enquanto ele dormia, e os dois se tornaram uma só carne. A instituição do casamento é apresentada como uma união entre um homem e uma mulher, deixando pai e mãe para se unirem",
+      "reflection_questions": [
+        "Qual é o propósito da criação do homem e da mulher?",
+        "Como a instituição do casamento reflete a relação entre Deus e a humanidade?",
+        "De que maneira a descrição do Jardim do Éden influencia nossa compreensão do propósito da vida humana?"
+      ],
+      "application": "A criação do homem e a instituição do casamento nos ensinam sobre a importância da relação entre os sexos e a união entre um homem e uma mulher. Isso também nos lembra da responsabilidade do homem de cuidar e proteger a terra e todos os seres vivos",
+      "summary": "Gênesis 2 descreve a criação do homem e a instituição do casamento, destacando a importância da relação entre os sexos e a responsabilidade do homem de cuidar a terra",
+      "prayer": "Deus, ajuda-nos a compreender e valorizar a criação do homem e a instituição do casamento, e a viver de acordo com o propósito que nos deste",
+      "audit_policy": "gemini-groq",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "e0ee2cde48862faa2c8f05471b7fe5c28f1a7e83add90e775ad9770c114fc769"
     }
   ]
 }
