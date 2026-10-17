@@ -130,36 +130,43 @@ async function auditWithRetry(provider, prompt, model) {
 }
 const generationInput = JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema });
 const generationProvider = available.includes('cloudflare') ? 'cloudflare' : available[0];
-const generated = await callProvider(generationProvider, generationInput, 'generation');
-assertDraft(generated);
-const content = JSON.stringify(generated, null, 2);
-const prompt = gatePrompt(content);
 const pairs = [['gemini', 'groq'], ['cloudflare', 'groq'], ['cloudflare', 'gemini']].filter((pair) => pair.every((provider) => available.includes(provider)));
-let auditors = null;
-let audits = null;
-let lastAuditError = null;
-for (const pair of pairs) {
-  try {
-    const candidate = {};
-    for (const auditor of pair) {
-      const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
-      candidate[auditor] = await auditWithRetry(auditor, prompt, model);
-    }
-    auditors = pair;
-    audits = candidate;
-    break;
-  } catch (error) {
-    lastAuditError = error;
-  }
-}
-if (!audits) throw new Error(`Nenhum par de duas APIs concluiu a auditoria: ${lastAuditError?.message || 'erro desconhecido'}`);
-const policy = auditors.slice().sort().join('-');
-const pkg = { audit_policy: policy, study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits };
-fs.writeFileSync(`${evidenceDir}/audit-package.json`, JSON.stringify(pkg, null, 2) + '\n');
 const validation = await import('../scripts/validate-audit-package.mjs');
-const result = validation.validateAuditPackage(pkg, gateIds);
-fs.writeFileSync(`${evidenceDir}/gate-result.json`, JSON.stringify(result, null, 2) + '\n');
-if (!result.valid) { console.error(JSON.stringify(result, null, 2)); process.exit(1); }
+let generated, pkg, result, feedback = '';
+for (let attempt = 1; attempt <= 3; attempt += 1) {
+  const generationPrompt = feedback ? `${generationInput}\n\nREVISÃO OBRIGATÓRIA DO CICLO ANTERIOR:\n${feedback}\nReescreva o estudo corrigindo esses pontos, evitando linguagem de modelo, repetição literal/estrutural e aplicações ou orações genéricas.` : generationInput;
+  generated = await callProvider(generationProvider, generationPrompt, 'generation');
+  assertDraft(generated);
+  const content = JSON.stringify(generated, null, 2);
+  const prompt = gatePrompt(content);
+  let auditors = null;
+  let audits = null;
+  let lastAuditError = null;
+  for (const pair of pairs) {
+    try {
+      const candidate = {};
+      for (const auditor of pair) {
+        const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
+        candidate[auditor] = await auditWithRetry(auditor, prompt, model);
+      }
+      auditors = pair;
+      audits = candidate;
+      break;
+    } catch (error) {
+      lastAuditError = error;
+    }
+  }
+  if (!audits) throw new Error(`Nenhum par de duas APIs concluiu a auditoria: ${lastAuditError?.message || 'erro desconhecido'}`);
+  const policy = auditors.slice().sort().join('-');
+  pkg = { audit_policy: policy, study_id: input.study_id, reference: input.reference, content, content_sha256: crypto.createHash('sha256').update(content, 'utf8').digest('hex'), audits };
+  result = validation.validateAuditPackage(pkg, gateIds);
+  fs.writeFileSync(`${evidenceDir}/audit-package.json`, JSON.stringify(pkg, null, 2) + '\n');
+  fs.writeFileSync(`${evidenceDir}/gate-result.json`, JSON.stringify(result, null, 2) + '\n');
+  if (result.valid) break;
+  feedback = result.blockers.join('; ');
+  console.log(`Ciclo ${attempt}/3 bloqueado; regenerando com feedback dos auditores.`);
+}
+if (!result?.valid) { console.error(JSON.stringify(result, null, 2)); process.exit(1); }
 const approved = JSON.parse(fs.readFileSync('content/studies-approved.json', 'utf8'));
 approved.studies = approved.studies.filter((study) => study.id !== input.study_id);
 approved.studies.push({ id: input.study_id, reference: input.reference, ...generated, audit_policy: policy, audit_status: 'approved_for_publication', content_sha256: pkg.content_sha256 });
