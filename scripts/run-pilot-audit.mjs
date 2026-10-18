@@ -130,7 +130,7 @@ async function auditWithRetry(provider, prompt, model) {
 }
 const generationInput = JSON.stringify({ study_id: input.study_id, reference: input.reference, source_passage: input.source_passage, content_schema: input.content_schema });
 const generationProvider = available.includes('cloudflare') ? 'cloudflare' : available[0];
-const pairs = [['cloudflare', 'groq'], ['gemini', 'groq'], ['cloudflare', 'gemini']].filter((pair) => pair.every((provider) => available.includes(provider)));
+const pairs = [['gemini', 'groq'], ['cloudflare', 'groq'], ['cloudflare', 'gemini']].filter((pair) => pair.every((provider) => available.includes(provider)));
 const validation = await import('../scripts/validate-audit-package.mjs');
 let generated, pkg, result, feedback = '';
 for (let attempt = 1; attempt <= 3; attempt += 1) {
