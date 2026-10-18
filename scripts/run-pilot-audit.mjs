@@ -144,11 +144,11 @@ for (let attempt = 1; attempt <= 3; attempt += 1) {
   let lastAuditError = null;
   for (const pair of pairs) {
     try {
-      const candidate = {};
-      for (const auditor of pair) {
+      const entries = await Promise.all(pair.map(async (auditor) => {
         const model = auditor === 'gemini' ? (process.env.GEMINI_MODEL || 'gemini-3.8-flash') : auditor === 'groq' ? 'openai/gpt-oss-120b' : `cloudflare/${process.env.CLOUDFLARE_MODEL || '@cf/openai/gpt-oss-120b'}`;
-        candidate[auditor] = await auditWithRetry(auditor, prompt, model);
-      }
+        return [auditor, await auditWithRetry(auditor, prompt, model)];
+      }));
+      const candidate = Object.fromEntries(entries);
       auditors = pair;
       audits = candidate;
       break;
