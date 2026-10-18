@@ -1,0 +1,309 @@
+{
+  "audit_policy": "gemini-groq",
+  "study_id": "estudo-marcos-1",
+  "reference": "Marcos 1:1-1:45",
+  "content": "{\n  \"title\": \"O Início do Evangelho de Jesus Cristo\",\n  \"objective\": \"Compreender a introdução do Evangelho de Marcos e o início da missão de Jesus\",\n  \"context\": \"O Evangelho de Marcos começa com a apresentação de João Batista, que prepara o caminho para Jesus, e continua com o batismo de Jesus, sua tentação no deserto e o início de sua pregação na Galileia\",\n  \"explanation\": \"Jesus é apresentado como o Filho de Deus, com autoridade para ensinar e expulsar demônios. Sua missão é anunciada como o cumprimento do tempo e a proximidade do Reino de Deus\",\n  \"reflection_questions\": [\n    \"Qual é o significado do batismo de Jesus e como ele se relaciona com a sua missão?\",\n    \"Como a autoridade de Jesus se manifesta em sua pregação e ações?\",\n    \"De que maneira a mensagem de Jesus sobre o Reino de Deus se aplica à nossa vida hoje?\"\n  ],\n  \"application\": \"A mensagem de Jesus sobre o Reino de Deus nos desafia a refletir sobre nossas prioridades e valores, e a considerar como podemos participar da construção do Reino de Deus em nossas comunidades e no mundo\",\n  \"summary\": \"O Evangelho de Marcos apresenta Jesus como o Filho de Deus, com autoridade para ensinar e expulsar demônios, e anuncia o início de sua missão na Galileia\",\n  \"prayer\": \"Deus, ajuda-nos a entender e a viver de acordo com a mensagem de Jesus sobre o Reino de Deus, e a sermos instrumentos de tua graça e amor no mundo\"\n}",
+  "content_sha256": "135ebec6472a1604c0ff6ba75f232bbf851918e3ad88b662e490760fbbabbe0a",
+  "audits": {
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-18T20:16:39.462Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Sintetiza fielmente os eventos e temas centrais de Marcos 1."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Contextualiza adequadamente a preparação de João e início ministerial."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Mantém-se estritamente dentro dos limites de Marcos 1:1-45."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica coerentemente Jesus, João Batista e os ouvintes."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Trata a narrativa evangelística conforme seu gênero literário."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Relata com coerência a ordem e eventos narrados."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Preserva a sequência: batismo, tentação, ministério e curas."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Jesus, João Batista e discípulos identificados corretamente."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Não confunde citações literais com paráfrases explicativas."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações possuem respaldo direto no texto."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretações contidas e diretamente ancoradas na perícope."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Sem imposição de doutrinas dogmáticas alheias ao texto."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Marcos 1:1 fundamenta textualmente Jesus como Filho de Deus."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não cria nem universaliza promessas indevidas."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita o anúncio da chegada do Reino de Deus."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Deriva adequadamente o apelo ao arrependimento e fé."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Alinha-se ao cumprimento profético citado no próprio texto."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Curas e exorcismos relatados sem promessa de repetição automática."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem universalização indevida de bênçãos materiais ou mágicas."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não introduz condenações ou juízos alheios ao texto."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração coerente com o texto, sem reivindicações inadequadas."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não distorce a permanência de Jesus no deserto."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação prática deriva organicamente do anúncio do Reino."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Conteúdo edificante, seguro e sem manipulação psicológica."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Sem legitimação de coerção, abusos ou vulnerabilidades."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Relata milagres sem prometer curas em substituição médica."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não contém promessas de prosperidade financeira ou barganha."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Sem profecias individuais direcionadas ao leitor contemporâneo."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui palavras inexistentes a Deus ou Jesus."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto redigido de forma natural, sem jargões vazios."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Apresenta síntese autoral sem copiar exaustivamente os versículos."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Seções articuladas sem duplicações estruturais desnecessárias."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação centrada na mensagem do Reino de Marcos 1:15."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração diretamente vinculada à resposta ao Reino proclamado."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerência integral entre contexto, explicação, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara, objetiva, gramaticalmente correta e fluida."
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-18T20:16:37.393Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Afirmações centrais coincidem com Marcos 1"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém contexto de João e missão inicial"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Nenhum conteúdo fora de Marcos 1"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente falantes e ouvintes"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Compatível com gênero narrativo"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos narrados coincidem com texto"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Sequência temporal preservada"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Pessoas e lugares corretos"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paráfrase clara, sem citações falsas"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Nenhuma afirmação sem base textual"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretação dentro dos limites"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe doutrina extra"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Cristologia alinhada ao texto"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa presente"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem aliança mencionada"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Comandos citados corretamente"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma profecia incluída"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Milagres descritos conforme passagem"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Bênçãos não universalizadas"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem juízos fora do texto"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração fiel ao contexto"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum jejum mencionado"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação baseada no Reino"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma orientação prejudicial"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Sem risco de abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não promete cura garantida"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Sem profecia pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Nenhuma fala divina inventada"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Linguagem não é modelo vazio"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Sem repetição literal"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura original mantida"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação ligada ao texto"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração relacionada ao tema"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerência entre explicação e oração"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara e legível"
+        }
+      }
+    }
+  }
+}

@@ -115,6 +115,25 @@
       "audit_policy": "cloudflare-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "494414da9ec59de780473ba8adbf8dbb895170efec75c6d3ddb283e3add4490e"
+    },
+    {
+      "id": "estudo-marcos-1",
+      "reference": "Marcos 1:1-1:45",
+      "title": "O Início do Evangelho de Jesus Cristo",
+      "objective": "Compreender a introdução do Evangelho de Marcos e o início da missão de Jesus",
+      "context": "O Evangelho de Marcos começa com a apresentação de João Batista, que prepara o caminho para Jesus, e continua com o batismo de Jesus, sua tentação no deserto e o início de sua pregação na Galileia",
+      "explanation": "Jesus é apresentado como o Filho de Deus, com autoridade para ensinar e expulsar demônios. Sua missão é anunciada como o cumprimento do tempo e a proximidade do Reino de Deus",
+      "reflection_questions": [
+        "Qual é o significado do batismo de Jesus e como ele se relaciona com a sua missão?",
+        "Como a autoridade de Jesus se manifesta em sua pregação e ações?",
+        "De que maneira a mensagem de Jesus sobre o Reino de Deus se aplica à nossa vida hoje?"
+      ],
+      "application": "A mensagem de Jesus sobre o Reino de Deus nos desafia a refletir sobre nossas prioridades e valores, e a considerar como podemos participar da construção do Reino de Deus em nossas comunidades e no mundo",
+      "summary": "O Evangelho de Marcos apresenta Jesus como o Filho de Deus, com autoridade para ensinar e expulsar demônios, e anuncia o início de sua missão na Galileia",
+      "prayer": "Deus, ajuda-nos a entender e a viver de acordo com a mensagem de Jesus sobre o Reino de Deus, e a sermos instrumentos de tua graça e amor no mundo",
+      "audit_policy": "gemini-groq",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "135ebec6472a1604c0ff6ba75f232bbf851918e3ad88b662e490760fbbabbe0a"
     }
   ]
 }
