@@ -96,6 +96,25 @@
       "audit_policy": "gemini-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "cde505724fa8d5bd6bd49028cd5b9d766ea258bdb6f4fa748352a7dae16bec43"
+    },
+    {
+      "id": "estudo-genesis-5",
+      "reference": "Gênesis 5:1-5:32",
+      "title": "A Linhagem de Adão: Uma História de Vida e Morte",
+      "objective": "Compreender a importância da linhagem de Adão e a mensagem espiritual por trás da lista de gerações em Gênesis 5",
+      "context": "Gênesis 5 apresenta a linhagem de Adão até Noé, destacando a longevidade e a prolificidade das gerações antigas, bem como a relação especial de Enoque com Deus",
+      "explanation": "A passagem destaca a criação de Adão e Eva à imagem de Deus e a subsequente lista de gerações que os sucederam, com ênfase na longevidade e na relação com Deus",
+      "reflection_questions": [
+        "Qual é o propósito da lista de gerações em Gênesis 5?",
+        "Como a relação de Enoque com Deus é única e o que podemos aprender com isso?",
+        "De que maneira a história de Adão e sua linhagem se relaciona com a nossa própria jornada espiritual?"
+      ],
+      "application": "A passagem nos lembra da importância de viver uma vida que honre a Deus e de buscar uma relação profunda com Ele, assim como Enoque",
+      "summary": "Gênesis 5 nos apresenta a história da linhagem de Adão, destacando a longevidade e a relação com Deus, e nos desafia a refletir sobre o propósito e o significado de nossa própria vida",
+      "prayer": "Deus, ajuda-nos a entender a mensagem por trás da linhagem de Adão e a viver uma vida que Te honre, buscando uma relação profunda e significativa Contigo",
+      "audit_policy": "cloudflare-groq",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "494414da9ec59de780473ba8adbf8dbb895170efec75c6d3ddb283e3add4490e"
     }
   ]
 }

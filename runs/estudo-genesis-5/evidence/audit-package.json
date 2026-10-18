@@ -1,0 +1,309 @@
+{
+  "audit_policy": "cloudflare-groq",
+  "study_id": "estudo-genesis-5",
+  "reference": "Gênesis 5:1-5:32",
+  "content": "{\n  \"title\": \"A Linhagem de Adão: Uma História de Vida e Morte\",\n  \"objective\": \"Compreender a importância da linhagem de Adão e a mensagem espiritual por trás da lista de gerações em Gênesis 5\",\n  \"context\": \"Gênesis 5 apresenta a linhagem de Adão até Noé, destacando a longevidade e a prolificidade das gerações antigas, bem como a relação especial de Enoque com Deus\",\n  \"explanation\": \"A passagem destaca a criação de Adão e Eva à imagem de Deus e a subsequente lista de gerações que os sucederam, com ênfase na longevidade e na relação com Deus\",\n  \"reflection_questions\": [\n    \"Qual é o propósito da lista de gerações em Gênesis 5?\",\n    \"Como a relação de Enoque com Deus é única e o que podemos aprender com isso?\",\n    \"De que maneira a história de Adão e sua linhagem se relaciona com a nossa própria jornada espiritual?\"\n  ],\n  \"application\": \"A passagem nos lembra da importância de viver uma vida que honre a Deus e de buscar uma relação profunda com Ele, assim como Enoque\",\n  \"summary\": \"Gênesis 5 nos apresenta a história da linhagem de Adão, destacando a longevidade e a relação com Deus, e nos desafia a refletir sobre o propósito e o significado de nossa própria vida\",\n  \"prayer\": \"Deus, ajuda-nos a entender a mensagem por trás da linhagem de Adão e a viver uma vida que Te honre, buscando uma relação profunda e significativa Contigo\"\n}",
+  "content_sha256": "494414da9ec59de780473ba8adbf8dbb895170efec75c6d3ddb283e3add4490e",
+  "audits": {
+    "cloudflare": {
+      "model": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "completed_at": "2026-10-18T15:25:14.532Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "corresponde à passagem"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "respeita contexto"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "não ultrapassa limites"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "coerente"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "compatível"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "eventos coerentes"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "sequência temporal correta"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "entidades corretas"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "citações claras"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "sem afirmações infundadas"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "sem extrapolações"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "sem doutrinação"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "sem leitura forçada"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "promessas respeitadas"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "alianças respeitadas"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "mandamentos respeitados"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "profecias respeitadas"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "milagres respeitados"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "bênçãos respeitadas"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "juízos respeitados"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "oração fiel"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "jejum respeitado"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "aplicação legítima"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "seguro pastoralmente"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "sem abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "sem promessa médica"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "sem promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "sem profecia pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "sem fala divina falsa"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "sem linguagem mecânica"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "sem repetição literal"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "sem repetição estrutural"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "sem aplicação genérica"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "sem oração genérica"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "coerente"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "linguagem clara"
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-18T15:25:21.328Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Resumo reflete genealogia e longevidade descritas."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém foco na lista e relação de Enoque."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Nenhum conteúdo fora de Gênesis 5 incluído."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Apresenta relato sem mudar falantes originais."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Estudo expositivo adequado ao gênero genealógico."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos listados coincidem com texto bíblico."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Sequência cronológica mantida do início ao fim."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Nomes (Adão, Sete, etc.) corretos."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Nenhuma citação literal, apenas resumo."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações baseadas no texto."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Aplicação geral, não extrapola fatos."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Nenhuma doutrina obrigatória inserida."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Nenhuma referência a Cristo."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Estudo não contém promessas."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma aliança citada."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum mandamento incluído."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem profecias apresentadas."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum milagre mencionado."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Bênçãos não universalizadas."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhum juízo incluído."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração pede entendimento, sem prometer resposta."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Fasting não abordado."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação deriva da relação de Enoque."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma orientação prejudicial."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhum conteúdo abusivo."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma afirmação médica."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa financeira."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Nenhuma profecia pessoal."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Deus não fala diretamente no estudo."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto original, não linguagem de modelo."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Não repete texto literalmente."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura variada, sem repetição automática."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação ligada ao tema da honra a Deus."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração relacionada ao estudo, não vazia."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerência entre explicação, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Texto claro e legível."
+        }
+      }
+    }
+  }
+}
