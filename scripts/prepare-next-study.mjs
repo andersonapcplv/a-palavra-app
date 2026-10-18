@@ -5,7 +5,9 @@ import { prepareGenerationInput } from './prepare-study-generation.mjs';
 const queue = JSON.parse(fs.readFileSync('content/queue/all-chapter-studies.json', 'utf8'));
 const approved = JSON.parse(fs.readFileSync('content/studies-approved.json', 'utf8'));
 const approvedIds = new Set((approved.studies || []).map((study) => study.id));
-const item = queue.studies.find((study) => !approvedIds.has(study.study_id));
+const priority = queue.studies.filter((study) => /^estudo-marcos-\d+$/.test(study.study_id));
+const remainder = queue.studies.filter((study) => !/^estudo-marcos-\d+$/.test(study.study_id));
+const item = [...priority, ...remainder].find((study) => !approvedIds.has(study.study_id));
 if (!item) {
   console.log('QUEUE_COMPLETE');
   process.exit(0);

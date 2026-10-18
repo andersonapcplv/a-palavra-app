@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       batch_size:
-        description: 'Quantidade de estudos neste lote (1 recomendado; máximo 3)'
+        description: 'Quantidade de estudos neste lote (1 ou 2 recomendados; máximo 3)'
         required: false
-        default: '1'
+        default: '2'
         type: string
 
 permissions:
