@@ -1,0 +1,309 @@
+{
+  "audit_policy": "cloudflare-gemini",
+  "study_id": "estudo-marcos-4",
+  "reference": "Marcos 4:1-4:41",
+  "content": "{\n  \"title\": \"A Semente da Palavra de Deus\",\n  \"objective\": \"Compreender a importância da semeadura espiritual e a responsabilidade de receber e cultivar a Palavra de Deus em nossas vidas\",\n  \"context\": \"Jesus ministra às multidões ao longo do mar, utilizando parábolas para ensinar sobre o Reino de Deus e a semeadura da Palavra. A parábola do semeador destaca diferentes tipos de solo, representando as diversas respostas humanas à mensagem divina.\",\n  \"explanation\": \"A parábola do semeador nos apresenta quatro tipos de solo: o caminho, os pedregulhos, os espinhos e a boa terra. Cada tipo de solo simboliza uma resposta diferente à Palavra de Deus. O caminho representa aqueles que não recebem a Palavra, os pedregulhos simbolizam os que a recebem com alegria, mas não a raizam em suas vidas, os espinhos representam aqueles cujas preocupações e cobiças sufocam a Palavra, e a boa terra simboliza os que recebem, raízam e produzem frutos.\",\n  \"reflection_questions\": [\n    \"Como eu tenho recebido a Palavra de Deus em minha vida?\",\n    \"Quais são os principais desafios que enfrento para cultivar a Palavra e produzir frutos espirituais?\",\n    \"De que maneira posso aplicar a lição da parábola do semeador para aprimorar minha relação com Deus e minha eficácia em compartilhar a Palavra com os outros?\"\n  ],\n  \"application\": \"Para aplicar a lição da parábola do semeador em nossas vidas, devemos nos esforçar para criar um solo fértil para a Palavra de Deus, removendo os espinhos das preocupações e cobiças, e nos aprofundando na compreensão e na obediência à Palavra. Isso envolve um compromisso diário com a leitura, o estudo e a meditação nas Escrituras, bem como a disposição para compartilhar a Palavra com os outros e viver de acordo com seus princípios.\",\n  \"summary\": \"A parábola do semeador nos ensina sobre a importância de receber e cultivar a Palavra de Deus em nossas vidas. Para produzir frutos espirituais, devemos criar um solo fértil, remover os obstáculos e nos aprofundar na compreensão e na obediência à Palavra.\",\n  \"prayer\": \"Deus, ajuda-me a criar um solo fértil para a Tua Palavra, a remover os espinhos que a sufocam e a produzir frutos espirituais que glorifiquem Teu nome. Dá-me sabedoria e coragem para compartilhar a Tua Palavra com os outros e para viver de acordo com os Teus princípios. Amém.\"\n}",
+  "content_sha256": "5aa7acef21cb2bb2132079174931c87b5a2e7356eb48fc8514b41d2d2aa05fcb",
+  "audits": {
+    "cloudflare": {
+      "model": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "completed_at": "2026-10-19T05:28:13.377Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "afirmações centrais correspondem"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "respeita contexto"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "não ultrapassa limites"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "coerente"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "compatível com parábola"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "eventos coerentes"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "sequência temporal preservada"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "entidades identificadas corretamente"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "fronteira clara"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "afirmações sustentadas"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "evita extrapolações"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "não transforma inferência em doutrina"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "não impõe leitura cristológica"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "respeita promessas"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "respeita alianças"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "respeita mandamentos"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "não universaliza profecias"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "não generaliza milagres"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "não universaliza bênçãos"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "respeita juízos"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "oração fiel"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "não distorce jejum"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "aplicação prática legítima"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "segurança pastoral"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "não legitima abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "não substitui cuidado médico"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "não oferece promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "não profetiza pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "não atribui fala a Deus"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "evita linguagem mecânica"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "não repete literalmente"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "evita repetição estrutural"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "não aplica genericamente"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "não ora genericamente"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "coerente"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "linguagem clara"
+        }
+      }
+    },
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-19T05:28:06.324Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Fiel à parábola do semeador e à explicação de Jesus no texto."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Situa o ensino de Jesus junto ao mar em parábolas corretamente."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Mantém-se dentro dos limites textuais de Marcos 4."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente Jesus ensinando as multidões e os discípulos."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Trata a passagem como narrativa e parábola de forma adequada."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos e explicações da parábola correspondem ao texto narrado."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Mantém a ordem da semeadura, dos solos e da colheita."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Jesus e as figuras parabólicas são descritos em conformidade ao texto."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Não há confusão entre citações literais e paráfrases analíticas."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações sobre os solos baseiam-se na passagem bíblica."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretação segue a própria explicação dada por Jesus nos versículos 14-20."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe dogmas ou doutrinas além do que o texto apresenta."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Não força tipologias cristológicas artificiais sobre a semeadura."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não generaliza nem inventa promessas ausentes na narrativa."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não distorce alianças bíblicas nem aplica conceitos inapropriados."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Exortações de ouvir e frutificar respeitam o escopo da passagem."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não cria previsões escatológicas ou proféticas infundadas."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza a tempestade acalmada nem promete milagres automáticos."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não promete bênçãos materiais infundadas."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita a advertência sobre a sufocação da palavra pelos espinhos."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração coerente com a parábola, pedindo auxílio para frutificar."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não faz menção indevida ou distorcida a jejum."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação prática decorre diretamente dos tipos de solo e da semente."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Ensino pastoralmente seguro, construtivo e sem indução de medo."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima abuso, controle ou situações de perigo."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não aborda nem interfere em questões médicas."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Alerta contra a sedução das riquezas com base no versículo 19."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Não faz profecias de caráter pessoal ao leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui palavras inexistentes à boca de Deus."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto redigido de forma orgânica e sem clichês mecânicos."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Explica o conteúdo com palavras próprias sem repetir o texto exato."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura bem distribuída sem redundâncias vazias entre seções."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação diretamente ligada à metáfora dos solos e espinhos."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração centrada nos elementos concretos da semente e dos solos."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Harmonia completa entre explicação, perguntas, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Linguagem clara, precisa e gramaticalmente correta em todo o estudo."
+        }
+      }
+    }
+  }
+}

@@ -172,6 +172,25 @@
       "audit_policy": "gemini-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "4a26e379bd7c33fd311da92b01af1aa31a70f312d7d6f65e5c36abc0e8a62a29"
+    },
+    {
+      "id": "estudo-marcos-4",
+      "reference": "Marcos 4:1-4:41",
+      "title": "A Semente da Palavra de Deus",
+      "objective": "Compreender a importância da semeadura espiritual e a responsabilidade de receber e cultivar a Palavra de Deus em nossas vidas",
+      "context": "Jesus ministra às multidões ao longo do mar, utilizando parábolas para ensinar sobre o Reino de Deus e a semeadura da Palavra. A parábola do semeador destaca diferentes tipos de solo, representando as diversas respostas humanas à mensagem divina.",
+      "explanation": "A parábola do semeador nos apresenta quatro tipos de solo: o caminho, os pedregulhos, os espinhos e a boa terra. Cada tipo de solo simboliza uma resposta diferente à Palavra de Deus. O caminho representa aqueles que não recebem a Palavra, os pedregulhos simbolizam os que a recebem com alegria, mas não a raizam em suas vidas, os espinhos representam aqueles cujas preocupações e cobiças sufocam a Palavra, e a boa terra simboliza os que recebem, raízam e produzem frutos.",
+      "reflection_questions": [
+        "Como eu tenho recebido a Palavra de Deus em minha vida?",
+        "Quais são os principais desafios que enfrento para cultivar a Palavra e produzir frutos espirituais?",
+        "De que maneira posso aplicar a lição da parábola do semeador para aprimorar minha relação com Deus e minha eficácia em compartilhar a Palavra com os outros?"
+      ],
+      "application": "Para aplicar a lição da parábola do semeador em nossas vidas, devemos nos esforçar para criar um solo fértil para a Palavra de Deus, removendo os espinhos das preocupações e cobiças, e nos aprofundando na compreensão e na obediência à Palavra. Isso envolve um compromisso diário com a leitura, o estudo e a meditação nas Escrituras, bem como a disposição para compartilhar a Palavra com os outros e viver de acordo com seus princípios.",
+      "summary": "A parábola do semeador nos ensina sobre a importância de receber e cultivar a Palavra de Deus em nossas vidas. Para produzir frutos espirituais, devemos criar um solo fértil, remover os obstáculos e nos aprofundar na compreensão e na obediência à Palavra.",
+      "prayer": "Deus, ajuda-me a criar um solo fértil para a Tua Palavra, a remover os espinhos que a sufocam e a produzir frutos espirituais que glorifiquem Teu nome. Dá-me sabedoria e coragem para compartilhar a Tua Palavra com os outros e para viver de acordo com os Teus princípios. Amém.",
+      "audit_policy": "cloudflare-gemini",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "5aa7acef21cb2bb2132079174931c87b5a2e7356eb48fc8514b41d2d2aa05fcb"
     }
   ]
 }
