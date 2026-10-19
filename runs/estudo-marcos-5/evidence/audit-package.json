@@ -1,0 +1,309 @@
+{
+  "audit_policy": "cloudflare-gemini",
+  "study_id": "estudo-marcos-5",
+  "reference": "Marcos 5:1-5:43",
+  "content": "{\n  \"title\": \"O Poder de Jesus: Libertação e Restauração\",\n  \"objective\": \"Compreender o poder de Jesus para libertar e restaurar as pessoas, tanto física quanto espiritualmente.\",\n  \"context\": \"Marcos 5 nos apresenta três histórias que destacam o poder de Jesus: a libertação do endemoninhado, a cura da mulher com fluxo de sangue e a ressurreição da filha de Jairo.\",\n  \"explanation\": \"A primeira história nos mostra um homem possuído por um espírito imundo, que era considerado incurável. No entanto, Jesus o libertou com uma simples ordem. Em seguida, uma mulher que sofria de um fluxo de sangue há doze anos foi curada ao tocar a roupa de Jesus. Por fim, a filha de Jairo, que havia morrido, foi ressuscitada por Jesus.\",\n  \"reflection_questions\": [\n    \"Como essas histórias nos ajudam a entender o poder de Jesus?\",\n    \"De que maneira podemos aplicar a fé e a confiança em Jesus em nossas próprias vidas?\",\n    \"Quais são as implicações da restauração e libertação que Jesus oferece para nossas vidas e para o mundo ao nosso redor?\"\n  ],\n  \"application\": \"Essas histórias nos desafiam a crer no poder de Jesus para transformar nossas vidas. Devemos buscar a libertação e a restauração que Ele oferece, tanto para nós mesmos quanto para aqueles ao nosso redor.\",\n  \"summary\": \"O poder de Jesus é capaz de libertar e restaurar as pessoas de todas as formas de opressão e sofrimento. Devemos confiar nEle e buscar Sua intervenção em nossas vidas.\",\n  \"prayer\": \"Deus, ajuda-nos a crer no Teu poder para libertar e restaurar. Dá-nos a fé para buscar a Tua intervenção em nossas vidas e para compartilhar a Tua restauração com aqueles ao nosso redor.\"\n}",
+  "content_sha256": "2fec056d79d1c899888a91dc30654a388ffb6350058336119566d9d3564bb624",
+  "audits": {
+    "cloudflare": {
+      "model": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "completed_at": "2026-10-19T10:29:38.778Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "afirmações centrais correspondem"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "respeita contexto"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "não ultrapassa limites"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "coerente"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "compatível com narrativa"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "eventos coerentes"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "sequência temporal preservada"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "pessoas e entidades identificadas"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "citação clara"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "sem afirmações sem sustentação"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "sem extrapolações"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "sem inferência em doutrina"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "sem leitura cristológica artificial"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "promessas respeitadas"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "alianças respeitadas"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "mandamentos respeitados"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "profecias não universalizadas"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "milagres não generalizados"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "bênçãos não universalizadas"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "juízos respeitados"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "oração fiel"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "jejum respeitado"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "aplicação prática legítima"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "segurança pastoral"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "sem abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "cuidado médico respeitado"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "sem promessa financeira"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "sem profecia pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "sem fala divina inventada"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "sem linguagem mecânica"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "sem repetição literal"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "sem repetição estrutural"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "sem aplicação genérica"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "sem oração genérica"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "coerência entre seções"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "linguagem clara"
+        }
+      }
+    },
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-19T10:29:29.401Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Sintetiza fielmente os três episódios centrais de Marcos 5."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Respeita o contexto narrativo do capítulo e suas transições."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Mantém o foco estritamente dentro dos limites de Marcos 5:1-43."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Coerência na identificação de Jesus, enfermos e ouvintes da narrativa."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Trata a passagem como narrativa evangélica de milagres."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Descreve com precisão os fatos e suas relações causais."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Preserva a ordem cronológica dos três relatos do capítulo."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente o endemoninhado, a mulher e a filha de Jairo."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Não há confusão entre citações literais e paráfrase explicativa."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações possuem sustentação factual no texto bíblico."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Evita deduções especulativas ou extrapolações infundadas."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe dogmas ou regras além do ensino da passagem."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Cristocentrismo legítimo derivado da própria atuação de Jesus no texto."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza promessas particulares como garantias automáticas."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Mantém correta correlação com a missão de Jesus nos evangelhos."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não cria mandamentos universais a partir de ordens circunstanciais."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não extrapola textos históricos como profecias futuras."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Apresenta o poder de Jesus sem garantir milagres automáticos."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não estende bênçãos além das condições bíblicas apresentadas."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Trata a libertação espiritual sem distorções de juízos divinos."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração pede auxílio e fé sem exigir respostas mecânicas."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não impõe nem distorce preceitos de jejum inexistentes no trecho."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicações práticas derivam logicamente do tema de restauração e fé."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Abordagem acolhedora e segura, sem suscitar medo ou culpa."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não minimiza perigos nem incentiva permanência em situações de risco."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não desestimula a medicina nem promete cura física garantida."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Isento de qualquer apelo ou garantia de ganho financeiro."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Ausência de previsões dirigidas individualmente ao leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui declarações inexistentes à voz de Deus."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Linguagem autoral e contextualizada, sem repetição mecânica de clichês."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Apresenta explicação própria sem reproduzir o texto bíblico palavra por palavra."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estruturação das seções desenvolve o raciocínio sem repetição viciosa."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação conectada diretamente aos exemplos de fé do texto."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração claramente vinculada aos eventos de restauração narrados no texto."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Harmonia temática completa entre objetivo, explicação, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Texto conciso, acessível e gramaticalmente claro em todas as seções."
+        }
+      }
+    }
+  }
+}

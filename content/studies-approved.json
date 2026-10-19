@@ -191,6 +191,25 @@
       "audit_policy": "cloudflare-gemini",
       "audit_status": "approved_for_publication",
       "content_sha256": "5aa7acef21cb2bb2132079174931c87b5a2e7356eb48fc8514b41d2d2aa05fcb"
+    },
+    {
+      "id": "estudo-marcos-5",
+      "reference": "Marcos 5:1-5:43",
+      "title": "O Poder de Jesus: Libertação e Restauração",
+      "objective": "Compreender o poder de Jesus para libertar e restaurar as pessoas, tanto física quanto espiritualmente.",
+      "context": "Marcos 5 nos apresenta três histórias que destacam o poder de Jesus: a libertação do endemoninhado, a cura da mulher com fluxo de sangue e a ressurreição da filha de Jairo.",
+      "explanation": "A primeira história nos mostra um homem possuído por um espírito imundo, que era considerado incurável. No entanto, Jesus o libertou com uma simples ordem. Em seguida, uma mulher que sofria de um fluxo de sangue há doze anos foi curada ao tocar a roupa de Jesus. Por fim, a filha de Jairo, que havia morrido, foi ressuscitada por Jesus.",
+      "reflection_questions": [
+        "Como essas histórias nos ajudam a entender o poder de Jesus?",
+        "De que maneira podemos aplicar a fé e a confiança em Jesus em nossas próprias vidas?",
+        "Quais são as implicações da restauração e libertação que Jesus oferece para nossas vidas e para o mundo ao nosso redor?"
+      ],
+      "application": "Essas histórias nos desafiam a crer no poder de Jesus para transformar nossas vidas. Devemos buscar a libertação e a restauração que Ele oferece, tanto para nós mesmos quanto para aqueles ao nosso redor.",
+      "summary": "O poder de Jesus é capaz de libertar e restaurar as pessoas de todas as formas de opressão e sofrimento. Devemos confiar nEle e buscar Sua intervenção em nossas vidas.",
+      "prayer": "Deus, ajuda-nos a crer no Teu poder para libertar e restaurar. Dá-nos a fé para buscar a Tua intervenção em nossas vidas e para compartilhar a Tua restauração com aqueles ao nosso redor.",
+      "audit_policy": "cloudflare-gemini",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "2fec056d79d1c899888a91dc30654a388ffb6350058336119566d9d3564bb624"
     }
   ]
 }
