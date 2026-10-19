@@ -1,0 +1,309 @@
+{
+  "audit_policy": "gemini-groq",
+  "study_id": "estudo-marcos-3",
+  "reference": "Marcos 3:1-3:35",
+  "content": "{\n  \"title\": \"A Autoridade de Jesus e a Nova Família\",\n  \"objective\": \"Compreender a autoridade de Jesus e o conceito de família espiritual\",\n  \"context\": \"Jesus enfrenta oposição dos fariseus e dos escribas, mas continua a demonstrar sua autoridade divina através de milagres e ensinamentos. Ele também redefine o conceito de família, enfatizando a importância da obediência à vontade de Deus.\",\n  \"explanation\": \"Neste capítulo, Jesus cura um homem com a mão definhada no sábado, o que gera controvérsia entre os fariseus. Em seguida, Ele nomeia os doze apóstolos e expulsa demônios, demonstrando sua autoridade sobre o reino das trevas. Os escribas acusam Jesus de ter Belzebu, mas Ele refuta essa acusação, explicando que um reino dividido não pode durar. Jesus também fala sobre a blasfêmia contra o Espírito Santo e redefine o conceito de família, enfatizando a importância da obediência à vontade de Deus.\",\n  \"reflection_questions\": [\n    \"Como a oposição dos fariseus e dos escribas nos ajuda a entender a importância da autoridade de Jesus?\",\n    \"O que significa fazer a vontade de Deus e como isso se relaciona com a ideia de família espiritual?\",\n    \"De que maneira podemos aplicar o ensinamento de Jesus sobre a família espiritual em nossas vidas?\"\n  ],\n  \"application\": \"Devemos buscar viver de acordo com a vontade de Deus, reconhecendo que nossa família espiritual é composta por aqueles que compartilham essa mesma dedicação. Isso nos leva a uma comunhão mais profunda com outros crentes e a uma vida de serviço e amor.\",\n  \"summary\": \"Jesus demonstra sua autoridade divina e redefine o conceito de família, enfatizando a importância da obediência à vontade de Deus. Isso nos leva a refletir sobre nossa própria relação com Deus e com a comunidade de crentes.\",\n  \"prayer\": \"Deus, ajuda-nos a entender e a viver de acordo com tua vontade, reconhecendo que nossa verdadeira família é composta por aqueles que te seguem. Dá-nos a graça de viver em comunhão uns com os outros e de demonstrar teu amor e tua autoridade em nossas vidas.\"\n}",
+  "content_sha256": "4a26e379bd7c33fd311da92b01af1aa31a70f312d7d6f65e5c36abc0e8a62a29",
+  "audits": {
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-19T04:28:33.396Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aborda fielmente a cura no sábado, os doze e a nova família."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém o contexto de oposição crescente e ensino de Jesus."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Limita-se aos episódios narrados em Marcos 3:1-35."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Distingue falas de Jesus dirigidas a fariseus, escribas e discípulos."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Trata a passagem adequadamente como narrativa evangélica e parábola."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos e argumentos relatados preservam coerência causal do texto."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Apresenta a ordem correta dos acontecimentos do capítulo."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica com precisão fariseus, escribas, doze apóstolos e familiares."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paráfrases claras sem confusão entre citações e explicações."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações possuem respaldo direto no relato bíblico."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretação equilibrada sem extrapolações dogmáticas ou narrativas."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe doutrinas alheias além das declarações do texto."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Foco cristológico natural baseado nos milagres e identidade de Jesus."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não reivindica indevidamente promessas específicas aos leitores."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não distorce escopos de alianças bíblicas na análise."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Fazer a vontade de Deus aplicado adequadamente sem legalismo."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não há manipulação ou universalização indevida de profecias."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Cura apresentada como sinal histórico sem promessa indiscriminada de cura."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Comunhão espiritual apresentada de acordo com o critério bíblico."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Alerta sobre blasfêmia contra o Espírito tratado com moderação."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração coerente pedindo graça para fazer a vontade divina."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não introduz nem distorce preceitos sobre jejum ausentes."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação direta ligada à comunhão e obediência a Deus."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não introduz medo, coerção ou sobrecarga emocional nociva."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima subjugação ou relações interpessoais abusivas."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não desestimula tratamento de saúde nem garante curas físicas."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não contém promessas de prosperidade financeira ou exigências pecuniárias."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Ausência de previsões oraculares personalizadas para o leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Nenhuma fala atribuída a Deus fora do registro bíblico."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto fluído e contextualizado, sem clichês mecânicos padronizados."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Sintetiza o relato com vocabulário próprio sem cópia integral."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura dinâmica e equilibrada entre seções de estudo."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação focada na família espiritual conforme Marcos 3:35."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração reflete especificamente os ensinamentos da perícope."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Concordância plena entre introdução, explicação, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Redação clara, concisa, gramaticalmente correta e precisa."
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-19T04:28:25.803Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Claims match Jesus' authority and family redefinition"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Reflects surrounding opposition and teachings accurately"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "No content beyond Mark 3 introduced"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Speakers and listeners correctly identified"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Fits narrative‑teaching genre"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Events correspond to Mark 3 storyline"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Chronology follows text order"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Groups and persons named correctly"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "No misused literal quotations"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "All statements have textual basis"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretation stays within passage scope"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "No doctrinal mandates imposed"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Christology reflects text, not forced"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "No promises asserted"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "No covenant references misapplied"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "No command scope misused"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "No prophetic claims made"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Miracle not presented as universal guarantee"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "No universal blessings claimed"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "No judgments beyond text"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Prayer generic, not tied to specific outcome"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Fasting not addressed"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Application logically derived from passage"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Advice is safe and non‑harmful"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "No abusive content"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No medical claims made"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "No financial promises given"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "No personal prophecy presented"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "No invented divine speech"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Language specific to passage"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "No verbatim repetition used"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Structure varies appropriately"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Application tied to Mark 3 themes"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Prayer relates to passage themes"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Explanation, application, prayer align"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Text is clear and understandable"
+        }
+      }
+    }
+  }
+}
