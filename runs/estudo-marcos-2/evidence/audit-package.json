@@ -1,0 +1,309 @@
+{
+  "audit_policy": "gemini-groq",
+  "study_id": "estudo-marcos-2",
+  "reference": "Marcos 2:1-2:28",
+  "content": "{\n  \"title\": \"A Autoridade de Jesus\",\n  \"objective\": \"Compreender a autoridade de Jesus e seu poder de perdoar pecados\",\n  \"context\": \"Jesus está em Cafarnaum, ensinando e curando pessoas. Ele encontra um paralítico e, ao invés de curá-lo imediatamente, perdoa seus pecados, o que causa controvérsia entre os escribas. Jesus também chama Levi, um publicano, para segui-lo e come com publicanos e pecadores, o que é questionado pelos fariseus.\",\n  \"explanation\": \"Jesus demonstra sua autoridade ao perdoar pecados e curar o paralítico. Ele também mostra que veio para chamar os pecadores e que o sábado foi feito para o ser humano, não o contrário. Além disso, Jesus compara o seu ministério com um remendo de pano novo em roupa velha e vinho novo em odres velhos, destacando a necessidade de uma nova abordagem espiritual.\",\n  \"reflection_questions\": [\n    \"Como posso aplicar a lição de Jesus sobre a autoridade e o poder de perdoar pecados em minha vida?\",\n    \"O que significa para mim que Jesus seja o Senhor do sábado e como posso viver de acordo com isso?\",\n    \"De que maneira posso, como Levi, responder ao chamado de Jesus e seguir em sua missão de alcançar os pecadores?\"\n  ],\n  \"application\": \"Devemos reconhecer a autoridade de Jesus em nossas vidas e buscar seu perdão e cura. Além disso, devemos ser abertos a novas abordagens espirituais e não se apegar a tradições ou práticas que não são relevantes para a nossa relação com Deus.\",\n  \"summary\": \"Jesus demonstra sua autoridade ao perdoar pecados e curar o paralítico, e chama Levi para segui-lo. Ele também ensina sobre a importância de uma nova abordagem espiritual e de não se apegar a tradições ou práticas que não são relevantes para a nossa relação com Deus.\",\n  \"prayer\": \"Deus, ajuda-me a reconhecer a autoridade de Jesus em minha vida e a buscar seu perdão e cura. Dá-me a coragem de seguir em sua missão de alcançar os pecadores e de viver de acordo com a sua vontade. Amém.\"\n}",
+  "content_sha256": "afa0536c967781f69917bcd51bfe697e916d175829616bc6cd86929897d824ad",
+  "audits": {
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "completed_at": "2026-10-19T00:28:47.599Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Sintetiza com fidelidade os episódios centrais de Marcos 2:1-28."
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Contextualiza com precisão Cafarnaum e os conflitos com líderes religiosos."
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Mantém-se estritamente delimitado aos relatos de Marcos 2:1-28."
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Diferencia com clareza Jesus, discípulos, escribas, fariseus e Levi."
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Aborda a narrativa evangélica e as analogias adequadamente."
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Descreve com exatidão a cura, o chamado e as controvérsias."
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Respeita a ordem cronológica dos acontecimentos narrados."
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica corretamente as figuras históricas e grupos mencionados."
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Parafraseia e analisa o texto sem confundir citações diretas."
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas as afirmações possuem sustentação direta no texto bíblico."
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretação equilibrada das parábolas dos odres e do sábado."
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não impõe conclusões dogmáticas alheias ao conteúdo textual."
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Foco na autoridade de Jesus decorre naturalmente da passagem."
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não universaliza indevidamente promessas restritas a contextos específicos."
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita a dinâmica do ministério de Jesus frente às tradições."
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Aplica o chamado ao discipulado sem distorcer mandamentos."
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não projeta previsões escatológicas descabidas no relato."
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Trata o milagre historicamente sem garantir cura física automática."
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Não promete bênçãos genéricas ou descontextualizadas ao leitor."
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Trata a oposição dos escribas e fariseus com moderação."
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "A oração expressa submissão sem reivindicar garantias infundadas."
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Respeita o ensino de Jesus sobre o jejum e o noivo."
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicações decorrem legitimamente das lições sobre autoridade e discipulado."
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Promove reflexão espiritual sadia sem induzir medo ou culpa."
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não incentiva submissão a opressões ou situações de risco."
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Menciona cura no contexto espiritual sem desautorizar cuidados médicos."
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Isento de qualquer apelo ou promessa de prosperidade financeira."
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Não formula profecias pessoais inventadas para o leitor."
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Não atribui palavras inexistentes à voz de Deus."
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Texto fluente, orgânico e livre de repetições mecânicas."
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Explica o conteúdo com palavras próprias e adequada síntese."
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Apresenta boa variedade estrutural entre as diferentes seções."
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicações ligadas especificamente ao perdão, tradições e seguimento a Jesus."
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração conectada diretamente aos temas da passagem bíblica."
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Excelente alinhamento entre objetivo, explicação, aplicação e oração."
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Redação clara, coerente, bem estruturada e acessível."
+        }
+      }
+    },
+    "groq": {
+      "model": "openai/gpt-oss-120b",
+      "completed_at": "2026-10-19T00:26:19.272Z",
+      "gates": {
+        "TARGET_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Afirma perdão e cura conforme Marcos 2"
+        },
+        "CONTEXT_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Mantém contexto de Cafarnaum e escribas"
+        },
+        "REFERENCE_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Nenhum conteúdo fora de Marcos 2"
+        },
+        "SPEAKER_AUDIENCE_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Identifica Jesus, escribas, fariseus, Levi corretamente"
+        },
+        "GENRE_COMPATIBILITY": {
+          "decision": "pass",
+          "evidence": "Apresenta como narrativa, compatível"
+        },
+        "NARRATIVE_EVENT_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Eventos seguem texto: paralítico, perdão, cura"
+        },
+        "TEMPORAL_SEQUENCE": {
+          "decision": "pass",
+          "evidence": "Sequência temporal mantida"
+        },
+        "PERSON_ENTITY_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Personagens corretos: Jesus, Levi, escribas"
+        },
+        "QUOTATION_BOUNDARY": {
+          "decision": "pass",
+          "evidence": "Paráfrase clara, sem confundir citações"
+        },
+        "UNSUPPORTED_CLAIM": {
+          "decision": "pass",
+          "evidence": "Todas afirmações sustentadas no texto"
+        },
+        "OVERINTERPRETATION": {
+          "decision": "pass",
+          "evidence": "Interpretação alinhada ao contexto"
+        },
+        "DOCTRINAL_OVERREACH": {
+          "decision": "pass",
+          "evidence": "Não cria doutrina além do texto"
+        },
+        "CHRISTOLOGICAL_FORCE": {
+          "decision": "pass",
+          "evidence": "Uso de títulos já presentes"
+        },
+        "PROMISE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma promessa presente para avaliar"
+        },
+        "COVENANT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Sem alusão a aliança"
+        },
+        "COMMAND_SCOPE": {
+          "decision": "pass",
+          "evidence": "Comandos citados corretamente"
+        },
+        "PROPHECY_SCOPE": {
+          "decision": "pass",
+          "evidence": "Nenhuma profecia incluída"
+        },
+        "MIRACLE_SCOPE": {
+          "decision": "pass",
+          "evidence": "Milagre descrito como evento específico"
+        },
+        "BLESSING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Bênção não universalizada"
+        },
+        "JUDGMENT_SCOPE": {
+          "decision": "pass",
+          "evidence": "Juízos mantidos ao texto"
+        },
+        "PRAYER_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Oração não promete resposta específica"
+        },
+        "FASTING_SCOPE": {
+          "decision": "pass",
+          "evidence": "Fasting descrito conforme Marcos 2"
+        },
+        "APPLICATION_FIDELITY": {
+          "decision": "pass",
+          "evidence": "Aplicação deriva do sentido da passagem"
+        },
+        "PASTORAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Nenhuma orientação prejudicial"
+        },
+        "ABUSE_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não legitima abuso"
+        },
+        "MEDICAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Não promete cura médica garantida"
+        },
+        "FINANCIAL_SAFETY": {
+          "decision": "pass",
+          "evidence": "Sem promessas financeiras"
+        },
+        "NO_PERSONAL_PROPHECY": {
+          "decision": "pass",
+          "evidence": "Nenhuma profecia pessoal"
+        },
+        "NO_FALSE_DIVINE_SPEECH": {
+          "decision": "pass",
+          "evidence": "Fala divina só do texto"
+        },
+        "NO_TEMPLATE_LANGUAGE": {
+          "decision": "pass",
+          "evidence": "Linguagem não meramente mecânica"
+        },
+        "NO_LITERAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Não repete literalmente texto"
+        },
+        "NO_STRUCTURAL_REPETITION": {
+          "decision": "pass",
+          "evidence": "Estrutura variada, sem repetição"
+        },
+        "NO_GENERIC_APPLICATION": {
+          "decision": "pass",
+          "evidence": "Aplicação focada na passagem"
+        },
+        "NO_GENERIC_PRAYER": {
+          "decision": "pass",
+          "evidence": "Oração ligada ao tema da passagem"
+        },
+        "CROSS_SECTION_CONSISTENCY": {
+          "decision": "pass",
+          "evidence": "Explicação, aplicação, oração coerentes"
+        },
+        "LANGUAGE_CLARITY": {
+          "decision": "pass",
+          "evidence": "Texto claro e legível"
+        }
+      }
+    }
+  }
+}

@@ -134,6 +134,25 @@
       "audit_policy": "gemini-groq",
       "audit_status": "approved_for_publication",
       "content_sha256": "135ebec6472a1604c0ff6ba75f232bbf851918e3ad88b662e490760fbbabbe0a"
+    },
+    {
+      "id": "estudo-marcos-2",
+      "reference": "Marcos 2:1-2:28",
+      "title": "A Autoridade de Jesus",
+      "objective": "Compreender a autoridade de Jesus e seu poder de perdoar pecados",
+      "context": "Jesus está em Cafarnaum, ensinando e curando pessoas. Ele encontra um paralítico e, ao invés de curá-lo imediatamente, perdoa seus pecados, o que causa controvérsia entre os escribas. Jesus também chama Levi, um publicano, para segui-lo e come com publicanos e pecadores, o que é questionado pelos fariseus.",
+      "explanation": "Jesus demonstra sua autoridade ao perdoar pecados e curar o paralítico. Ele também mostra que veio para chamar os pecadores e que o sábado foi feito para o ser humano, não o contrário. Além disso, Jesus compara o seu ministério com um remendo de pano novo em roupa velha e vinho novo em odres velhos, destacando a necessidade de uma nova abordagem espiritual.",
+      "reflection_questions": [
+        "Como posso aplicar a lição de Jesus sobre a autoridade e o poder de perdoar pecados em minha vida?",
+        "O que significa para mim que Jesus seja o Senhor do sábado e como posso viver de acordo com isso?",
+        "De que maneira posso, como Levi, responder ao chamado de Jesus e seguir em sua missão de alcançar os pecadores?"
+      ],
+      "application": "Devemos reconhecer a autoridade de Jesus em nossas vidas e buscar seu perdão e cura. Além disso, devemos ser abertos a novas abordagens espirituais e não se apegar a tradições ou práticas que não são relevantes para a nossa relação com Deus.",
+      "summary": "Jesus demonstra sua autoridade ao perdoar pecados e curar o paralítico, e chama Levi para segui-lo. Ele também ensina sobre a importância de uma nova abordagem espiritual e de não se apegar a tradições ou práticas que não são relevantes para a nossa relação com Deus.",
+      "prayer": "Deus, ajuda-me a reconhecer a autoridade de Jesus em minha vida e a buscar seu perdão e cura. Dá-me a coragem de seguir em sua missão de alcançar os pecadores e de viver de acordo com a sua vontade. Amém.",
+      "audit_policy": "gemini-groq",
+      "audit_status": "approved_for_publication",
+      "content_sha256": "afa0536c967781f69917bcd51bfe697e916d175829616bc6cd86929897d824ad"
     }
   ]
 }
